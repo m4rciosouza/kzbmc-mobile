@@ -8,7 +8,7 @@ angular.module('kzbmcMobileApp')
 	  
 	  $scope.cadastrar = function( canvas ) {
 		  if($scope.form.$valid) {
-			  var canvasObj = { 'nome' : canvas.nome, 'descricao' : canvas.descricao };
+			  var canvasObj = { 'nome' : canvas.nome, 'descricao' : canvas.descricao, 'itens' : { 'pc' : [ { 'titulo' : 't1', 'descricao' : 'd1', 'cor' : 'success' }, { 'titulo' : 'título 1', 'descricao' : 'descrição 2', 'cor' : 'warning' } ], 'ac' : [], 'rc' : [], 'pv' : [], 'rcl' : [], 'ca' : [], 'sc' : [], 'ec' : [], 'fr' : [] } };
 			  $scope.projetos.push( angular.toJson( canvasObj ) );
 			  localStorageService.add( 'projetos', $scope.projetos );
 			  $scope.parseProjetos();
@@ -16,8 +16,10 @@ angular.module('kzbmcMobileApp')
 	  };
 	  
 	  $scope.reset = function( canvas ) {
-		  canvas.nome = '';
-		  canvas.descricao = '';
+		  if( typeof canvas !== 'undefined' ) {
+		    canvas.nome = '';
+		    canvas.descricao = '';
+		  }
 	  };
 	  
 	  $scope.parseProjetos = function() {
