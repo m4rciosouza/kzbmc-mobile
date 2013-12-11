@@ -23,7 +23,7 @@ angular.module( 'kzbmcMobileApp' )
         localStorageService.add( 'projetos', listaProjetos );
       };
      
-    // load info to the edit modal form
+    // load info to the edit/remove modal form
     $scope.modalEdit = function( tipo, descricao, index ) {
         $scope.index = index;
         $scope.tipo = tipo;
@@ -37,14 +37,20 @@ angular.module( 'kzbmcMobileApp' )
     // updates a project item
     $scope.atualizar = function( item ) {
           var novoItem = { 'titulo' : item.titulo, 'descricao' : item.descricao, 'cor' : item.cor };
-          console.log( angular.fromJson(novoItem));
-          console.log($scope.index);
           var itemObj = $scope.obterItemObj( $scope.tipo );
           itemObj[ $scope.index ] = novoItem;
           listaProjetos[ id ] = angular.toJson( $scope.projeto );
           localStorageService.add( 'projetos', listaProjetos );
         };
-      
+        
+    // removes a project item
+    $scope.remover = function() {
+          var itemObj = $scope.obterItemObj( $scope.tipo );
+          itemObj.splice( $scope.index, 1 );
+          listaProjetos[ id ] = angular.toJson( $scope.projeto );
+          localStorageService.add( 'projetos', listaProjetos );
+        };
+        
     // load an object array based on your kind
     $scope.obterItemObj = function( tipo ) {
           var itemObj = '';
