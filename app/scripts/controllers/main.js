@@ -3,7 +3,7 @@
 angular.module('kzbmcMobileApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
 	  
-	  // http://gregpike.net/demos/angular-local-storage/demo/demo.html
+	  // uncomment to clean the local storage data
 	  //localStorageService.clearAll();
 	  
 	  // create a new canvas

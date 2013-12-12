@@ -3,9 +3,9 @@
 angular.module( 'kzbmcMobileApp' )
   .controller( 'CanvasCtrl', function( $scope, $routeParams, localStorageService ) {
     
-    var listaProjetos = localStorageService.get( 'projetos' ) || [];
-    var id = parseInt( $routeParams.id, 10 );
-    $scope.projeto = angular.fromJson( listaProjetos[ id ] );
+    $scope.listaProjetos = localStorageService.get( 'projetos' ) || [];
+    $scope.id = parseInt( $routeParams.id, 10 );
+    $scope.projeto = angular.fromJson( $scope.listaProjetos[ $scope.id ] );
     
     // load info to the add modal form
     $scope.modalAdd = function( tipo, descricao ) {
@@ -19,8 +19,8 @@ angular.module( 'kzbmcMobileApp' )
         var novoItem = { 'titulo' : item.titulo, 'descricao' : item.descricao, 'cor' : item.cor };
         var itemObj = $scope.obterItemObj( $scope.tipo );
         itemObj.push( novoItem );
-        listaProjetos[ id ] = angular.toJson( $scope.projeto );
-        localStorageService.add( 'projetos', listaProjetos );
+        $scope.listaProjetos[ $scope.id ] = angular.toJson( $scope.projeto );
+        localStorageService.add( 'projetos', $scope.listaProjetos );
       };
      
     // load info to the edit/remove modal form
@@ -39,16 +39,16 @@ angular.module( 'kzbmcMobileApp' )
           var novoItem = { 'titulo' : item.titulo, 'descricao' : item.descricao, 'cor' : item.cor };
           var itemObj = $scope.obterItemObj( $scope.tipo );
           itemObj[ $scope.index ] = novoItem;
-          listaProjetos[ id ] = angular.toJson( $scope.projeto );
-          localStorageService.add( 'projetos', listaProjetos );
+          $scope.listaProjetos[ $scope.id ] = angular.toJson( $scope.projeto );
+          localStorageService.add( 'projetos', $scope.listaProjetos );
         };
         
     // removes a project item
     $scope.remover = function() {
           var itemObj = $scope.obterItemObj( $scope.tipo );
           itemObj.splice( $scope.index, 1 );
-          listaProjetos[ id ] = angular.toJson( $scope.projeto );
-          localStorageService.add( 'projetos', listaProjetos );
+          $scope.listaProjetos[ $scope.id ] = angular.toJson( $scope.projeto );
+          localStorageService.add( 'projetos', $scope.listaProjetos );
         };
         
     // load an object array based on your kind
