@@ -14,14 +14,20 @@ body {
     padding-top : 60px;
 }
 
+.kz_border { 
+	border : 2px dashed #666; 
+}
 .kz_border_top { 
-	border-top : 2px dashed #000; 
+	border-top : 2px dashed #666; 
 }
 .kz_border_left { 
-	border-left : 2px dashed #000; 
+	border-left : 2px dashed #666; 
 }
 .kz_border_right { 
-	border-right : 2px dashed #000; 
+	border-right : 2px dashed #666; 
+}
+.kz_border_bottom { 
+	border-bottom : 2px dashed #666; 
 }
 .kz_img_position { 
 	position : absolute; top : 0px; right : -2px; 
@@ -36,4 +42,18 @@ body {
 	padding-top : 9px;
 	margin : 40px 0 20px;
 	border-top : 1px solid #eee;
+}
+.kz_width_20 {
+	width : 20%;
+}
+.kz_width_50 {
+	width : 50%;
+}
+.kz_width_100 {
+	width : 100%;
+}
+.kz_td {
+	vertical-align : top;
+	position : relative; 
+	padding : 10px;
 }
