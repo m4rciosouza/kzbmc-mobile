@@ -18,3 +18,7 @@ npm install
 bower install
 grunt serve
 ```
+
+### License
+
+[BSD license](http://opensource.org/licenses/bsd-license.php)

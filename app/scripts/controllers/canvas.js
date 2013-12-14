@@ -85,4 +85,12 @@ angular.module( 'kzbmcMobileApp' )
           }
           return itemObj;
         };
+     
+    $scope.sortableOptions = {
+        stop : function() {
+                $scope.listaProjetos[ $scope.id ] = angular.toJson( $scope.projeto );
+                localStorageService.add( 'projetos', $scope.listaProjetos );
+              },
+        axis : 'y',
+      };
   });

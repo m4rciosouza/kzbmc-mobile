@@ -6,7 +6,8 @@ angular.module('kzbmcMobileApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ui.sortable'
 ])
   .config(function ($routeProvider) {
     $routeProvider
