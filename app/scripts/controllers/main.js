@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('kzbmcMobileApp')
-  .controller('MainCtrl', function ($scope, localStorageService) {
+  .controller('MainCtrl', [ '$scope', 'localStorageService', function( $scope, localStorageService ) {
 	  
 	  // uncomment to clean the local storage data
 	  //localStorageService.clearAll();
@@ -57,4 +57,4 @@ angular.module('kzbmcMobileApp')
 	  };
 	  
 	  $scope.parseProjetos();
-  });
+  }]);

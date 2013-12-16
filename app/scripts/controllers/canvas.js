@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module( 'kzbmcMobileApp' )
-  .controller( 'CanvasCtrl', function( $scope, $routeParams, localStorageService ) {
+  .controller( 'CanvasCtrl', [ '$scope', '$routeParams', 'localStorageService', function( $scope, $routeParams, localStorageService ) {
     
     $scope.listaProjetos = localStorageService.get( 'projetos' ) || [];
     $scope.id = parseInt( $routeParams.id, 10 );
@@ -93,4 +93,4 @@ angular.module( 'kzbmcMobileApp' )
               },
         axis : 'y',
       };
-  });
+  }]);
