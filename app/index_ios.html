@@ -9,6 +9,9 @@
     <title>Canvas de Modelo de Negócios | Kazale</title>
     <meta name="description" content="Crie seu próprio Canvas de Modelo de Negócios ( Business Model Canvas ) de seu computador ou celular, compartilhe com amigos e muito mais...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="kzcbmc_ico.png" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -371,6 +374,24 @@
   		</div>
 	</div>
 	
+	<!-- Modal -->
+	<div class="modal fade" id="installApp" tabindex="-1" role="dialog" aria-labelledby="installAppLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="installAppLabel">Instalar Aplicativo</h4>
+	      </div>
+	      <div class="modal-body">
+	      	Para instalar o aplicativo Canvas de Modelo de Negócios no seu iPhone/iPad clique no botão de 
+	      	bookmarking, que dependendo da versão do seu IOS será 
+	      	<img ng-src="images/book6.png" alt="IOS 6 bookmarking" width="20px" /> ou 
+	      	<img ng-src="images/book7.png" alt="IOS 7 bookmarking" width="20px" /> ( clique em Add to Home Screen ) ,
+	      	um atalho será criado na sua área de trabalho para o acesso ao aplicativo.
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
     <script src="bower_components/jquery-ui-touch/jquery.ui.touch-punch.min.js"></script>
@@ -402,5 +423,17 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/canvas.js"></script>
     <!-- endbuild -->
+    
+    <script>
+    jQuery( document ).ready( function(){
+    	if( ! window.navigator.standalone ) {
+    		jQuery( '#installApp' ).modal( { keyboard : false } );
+    		jQuery( '#installApp' ).on('hidden.bs.modal', function ( e ) {
+    			jQuery( '#installApp' ).modal( 'show' );	
+    		});
+    		jQuery( '#installApp' ).modal( 'show' );
+    	}
+    });
+    </script>
 </body>
 </html>
