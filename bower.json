@@ -1,6 +1,6 @@
 {
   "name": "kzbmc-mobile",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "dependencies": {
     "angular": "~1.2.0",
     "json3": "~3.2.4",

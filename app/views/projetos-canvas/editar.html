@@ -1,0 +1,30 @@
+<div class="page-header kz_center">
+  	<h1>Editar Canvas</h1>
+</div>
+<div class="kz_content">
+	<div class="row">
+		<div class="col-xs-12 kz_center">
+      		<form role="form" name="form" novalidate>
+        		<div class="form-group">
+    				<label for="nome" class="control-label">Nome do Projeto</label>
+            <input type="text" class="form-control" id="nome" name="nome" 
+                maxlength="50" ng-model="canvasEditar.nome"
+                placeholder="Digite o nome do projeto..." required />
+  				</div>
+  				<div class="form-group">
+    				<label for="descricao" class="control-label">Breve Descrição</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" 
+                maxlength="50" ng-model="canvasEditar.descricao" 
+                placeholder="Digite uma breve descrição do projeto..." required />
+  				</div>
+  				<div class="form-group">
+  					<button type="button" class="btn btn-primary" ng-click="atualizar(canvasEditar)" 
+              ng-disabled="form.$invalid">
+      					Atualizar
+      				</button>
+  					<a ng-href="#/" class="btn btn-primary">Cancelar</a>
+  				</div>
+        	</form>
+		</div>
+	</div>
+</div>

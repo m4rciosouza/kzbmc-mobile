@@ -12,7 +12,7 @@ Business Model Canvas is a strategic management and entrepreneurial tool. It all
 
 ### How to run it
 ```
-git clone git@github.com:m4rciosouza/kzbmc-mobile.git
+git clone https://github.com/m4rciosouza/kzbmc-mobile.git
 cd kzbmc-mobile
 npm install
 bower install

@@ -1,0 +1,43 @@
+<div class="page-header kz_center">
+  	<h1>Canvas de Modelo de Negócios</h1>
+</div>
+<div class="kz_content">
+	<div class="row">
+		<div class="col-xs-12 kz_center">
+      <a ng-href="#cadastrar-canvas" class="btn btn-primary btn-lg">Criar Novo Canvas</a>
+		</div>
+	</div>
+	<br />
+	<div class="table-responsive" ng-show="projetos.length>0">
+  		<table class="table table-striped table-hover">
+    		<thead>
+    			<tr>
+    				<th>Meus Canvas de Modelo de Negócios</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr ng-repeat="projeto in projetos">
+    				<td class="kz_mouse_cursor">
+              <a ng-href="#/editar-canvas/{{$index}}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-pencil"></span>
+              </a>
+              <a ng-href="#/remover-canvas/{{$index}}" class="btn btn-primary">
+                <span class="glyphicon glyphicon-trash"></span>
+              </a>
+    					<a ng-href="#/canvas/{{$index}}">
+    						{{projeto.nome}}<br />
+    						<small><em>{{projeto.descricao}}</em></small>
+    					</a>
+    				</td>
+    			</tr>
+    		</tbody>
+  		</table>
+	</div>
+			
+	<br />
+  	<div class="row" ng-show="projetos.length<1">
+		<div class="col-xs-12 kz_center">
+			<p>Nenhum Canvas criado, clique no botão acima para criar um agora mesmo.</p>
+		</div>
+	</div>
+</div>
