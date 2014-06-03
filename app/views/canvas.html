@@ -14,16 +14,15 @@
 					<h5>
 						Parceiros<br />Chave
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('pc', 'Adicionar item de Parceiros Chave')">
-						Adicionar
+						<span class="glyphicon glyphicon-plus"></span>
 					</a>
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#parceirosChave">
+					<a href="" data-toggle="modal" data-target="#parceirosChave" class="btn btn-primary">
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.pc">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.pc" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.pc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -45,16 +44,15 @@
 					<h5>
 						Atividades<br />Chave
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ac', 'Adicionar item de Atividades Chave')">
-						Adicionar
+						<span class="glyphicon glyphicon-plus"></span>
 					</a>
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#atividadesChave"> 
+					<a href="" data-toggle="modal" data-target="#atividadesChave" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ac">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ac" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.ac" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -76,16 +74,15 @@
 					<h5>
 						Propostas<br />de Valor
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('pv', 'Adicionar item de Propostas de Valor')">
-						Adicionar
+						<span class="glyphicon glyphicon-plus"></span>
 					</a> 
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#propostasValor"> 
+					<a href="" data-toggle="modal" data-target="#propostasValor" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.pv" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -107,16 +104,15 @@
 					<h5>
 						Relacionamento<br />com os Clientes
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('rcl', 'Adicionar item de Relacionamento com os Clientes')">
-						Adicionar
+						<span class="glyphicon glyphicon-plus"></span>
 					</a>
-					&nbsp;
-					<a href="" data-toggle="modal" data-target="#relacionamentoClientes"> 
+					<a href="" data-toggle="modal" data-target="#relacionamentoClientes" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.rcl" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -138,16 +134,15 @@
 					<h5>
 						Segmentos<br />de Clientes
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('sc', 'Adicionar item de Segmentos de Clientes')">
-						Adicionar
-					</a> 
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#segmentosClientes"> 
+						<span class="glyphicon glyphicon-plus"></span>
+					</a>
+					<a href="" data-toggle="modal" data-target="#segmentosClientes" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.sc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -171,16 +166,15 @@
 					<h5>
 						Recursos<br />Chave
 					</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('rc', 'Adicionar item de Recursos Chave')">
-						Adicionar
-					</a> 
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#recursosChave"> 
+						<span class="glyphicon glyphicon-plus"></span>
+					</a>
+					<a href="" data-toggle="modal" data-target="#recursosChave" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.rc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -200,16 +194,15 @@
 				<td class="kz_td kz_width_20 kz_border">
 					<img ng-src="images/canais.png" alt="Canais" class="kz_img_position" />
 					<h5>Canais</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ca', 'Adicionar item de Canais')">
-						Adicionar
-					</a> 
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#canais"> 
+						<span class="glyphicon glyphicon-plus"></span>
+					</a>
+					<a href="" data-toggle="modal" data-target="#canais" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.ca" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -236,16 +229,15 @@
 				<td class="kz_td kz_width_50 kz_border_right">
 					<img ng-src="images/estrutura_custo.png" alt="Estrutura de Custo" class="kz_img_position" />
 					<h5>Estrutura de Custo</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ec', 'Adicionar item de Estrutura de Custo')">
-						Adicionar
+						<span class="glyphicon glyphicon-plus"></span>
 					</a>
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#estruturaCusto"> 
+					<a href="" data-toggle="modal" data-target="#estruturaCusto" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.ec" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -265,16 +257,15 @@
 				<td class="kz_td kz_width_50">
 					<img ng-src="images/fluxo_receita.png" alt="Fluxo de Receita" class="kz_img_position" />
 					<h5>Fluxo de Receita</h5>
-					<a href="" data-toggle="modal" data-target="#adicionarItem" 
+					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('fr', 'Adicionar item de Fluxo de Receita')">
-						Adicionar
-					</a> 
-					&nbsp; 
-					<a href="" data-toggle="modal" data-target="#fluxoReceita"> 
+						<span class="glyphicon glyphicon-plus"></span>
+					</a>
+					<a href="" data-toggle="modal" data-target="#fluxoReceita" class="btn btn-primary"> 
 						<span class="glyphicon glyphicon-info-sign"></span>
 					</a>
 					
-					<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr">
+					<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.fr" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -305,16 +296,12 @@
 			<h5>
 				Parceiros<br />Chave
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('pc', 'Adicionar item de Parceiros Chave')">
-				Adicionar
-			</a>
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#parceirosChave">
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pc">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.pc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -340,16 +327,12 @@
 			<h5>
 				Atividades<br />Chave
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ac', 'Adicionar item de Atividades Chave')">
-				Adicionar
-			</a>
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#atividadesChave"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ac">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ac" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ac" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -375,16 +358,12 @@
 			<h5>
 				Recursos<br />Chave
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('rc', 'Adicionar item de Recursos Chave')">
-				Adicionar
-			</a> 
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#recursosChave"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.rc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -410,16 +389,12 @@
 			<h5>
 				Propostas<br />de Valor
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('pv', 'Adicionar item de Propostas de Valor')">
-				Adicionar
-			</a> 
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#propostasValor"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.pv" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -445,16 +420,12 @@
 			<h5>
 				Relacionamento<br />com os Clientes
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('rcl', 'Adicionar item de Relacionamento com os Clientes')">
-				Adicionar
-			</a>
-			&nbsp;
-			<a href="" data-toggle="modal" data-target="#relacionamentoClientes"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.rcl" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -478,16 +449,12 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/canais.png" alt="Canais" class="kz_img_position" />
 			<h5>Canais</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ca', 'Adicionar item de Canais')">
-				Adicionar
-			</a> 
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#canais"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ca" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -513,16 +480,12 @@
 			<h5>
 				Segmentos<br />de Clientes
 			</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('sc', 'Adicionar item de Segmentos de Clientes')">
-				Adicionar
-			</a> 
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#segmentosClientes"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.sc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -546,16 +509,12 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/estrutura_custo.png" alt="Estrutura de Custo" class="kz_img_position" />
 			<h5>Estrutura de Custo</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ec', 'Adicionar item de Estrutura de Custo')">
-				Adicionar
-			</a>
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#estruturaCusto"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ec" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -579,16 +538,12 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/fluxo_receita.png" alt="Fluxo de Receita" class="kz_img_position" />
 			<h5>Fluxo de Receita</h5>
-			<a href="" data-toggle="modal" data-target="#adicionarItem" 
+			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('fr', 'Adicionar item de Fluxo de Receita')">
-				Adicionar
-			</a> 
-			&nbsp; 
-			<a href="" data-toggle="modal" data-target="#fluxoReceita"> 
-				<span class="glyphicon glyphicon-info-sign"></span>
+				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
 			
-			<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr">
+			<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.fr" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
@@ -620,23 +575,24 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<h5>Quem são os nossos Parceiros Chave?</h5>
-				<h5>Quem são os nossos Fornecedores Chave?</h5>
-				<h5>Quais Recursos Chave estamos adquirindo de parceiros?</h5>
-				<h5>Quais Atividades Chave os parceiros realizam?</h5>
-				<strong>MOTIVAÇÕES PARA PARCERIAS:</strong>
+				<h5>Quem s&atilde;o os nossos Parceiros Chave?</h5>  
+				<h5>Quem s&atilde;o os nossos Fornecedores Chave?</h5>  
+				<h5>Quais Recursos Chave estamos adquirindo de parceiros?</h5>  
+				<h5>Quais Atividades Chave os parceiros realizam?</h5>  
+				<hr />  
+				<strong>MOTIVA&Ccedil;&Otilde;ES PARA PARCERIAS:</strong>   
 				<ul class="list-unstyled">
 					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Otimização e economia
+						<span class="glyphicon glyphicon-star-empty"></span>
+						&nbsp;Otimiza&ccedil;&atilde;o e economia
 					</li>
 					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Redução de risco e incerteza
+						<span class="glyphicon glyphicon-star-empty"></span>
+						&nbsp;Redu&ccedil;&atilde;o de risco e incerteza
 					</li>
 					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Aquisição de recursos particulares e atividades
+						<span class="glyphicon glyphicon-star-empty"></span>
+						&nbsp;Aquisi&ccedil;&atilde;o de recursos particulares e atividades
 					</li>
 				</ul>
 			</div>
@@ -660,23 +616,15 @@
 			</div>
 			<div class="modal-body">
 				<h5>Quais Atividades Chave nossa Proposta de Valor exige?</h5>
-				<h5>Nossos Canais de Distribuição?</h5>
+				<h5>Nossos Canais de Distribui&ccedil;&atilde;o?</h5>
 				<h5>Relacionamento com o Cliente?</h5>
 				<h5>Fontes de receita?</h5>
-				<strong>CATEGORIAS:</strong>
+				<hr />
+				<strong>CATEGORIAS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Produção
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Resolução de Problemas
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Plataforma / Rede
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Produção</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Resolu&ccedil;&atilde;o de Problemas</li> 
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Plataforma / Rede</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -699,27 +647,16 @@
 			</div>
 			<div class="modal-body">
 				<h5>Quais Recursos Chave nossa Proposta de Valor requer?</h5>
-				<h5>Nossos canais de distribuição?</h5>
+				<h5>Nossos canais de distribui&ccedil;&atilde;o?</h5>
 				<h5>Relacionamento com os Clientes?</h5>
 				<h5>Fontes de receita?</h5>
-				<strong>TIPOS DE RECURSOS:</strong>
+				<hr />
+				<strong>TIPOS DE RECURSOS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Físico
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Intelectual (patentes de marcas, direitos autorais, dados)
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Humano
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Financeiro
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;F&iacute;sico</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Intelectual (patentes de marcas, direitos autorais, dados)</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Humano</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Financeiro</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -743,40 +680,24 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<h5>Que valores nós entregamos ao cliente?</h5>
-				<h5>Quais problemas dos nossos clientes estamos ajudando a
-					resolver?</h5>
-				<h5>Quais pacotes de produtos e serviços oferecemos a cada
-					Segmento de Cliente?</h5>
+				<h5>Que valores n&oacute;s entregamos ao cliente?</h5>
+				<h5>Quais problemas dos nossos clientes estamos ajudando a resolver?</h5>
+				<h5>Quais pacotes de produtos e servi&ccedil;os oferecemos a cada Segmento de Cliente?</h5>
 				<h5>Quais necessidades dos clientes estamos satisfazendo?</h5>
-				<strong>CARACTERÍSTICAS:</strong>
+				<hr />
+				<strong>CARACTER&Iacute;STICAS:</strong>
 				<ul class="list-unstyled">
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Novidade</li>
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Performance</li>
-					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Personalização</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						"Realizando os Trabalhos"
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Personaliza&ccedil;&atilde;o</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;"Realizando os Trabalhos"</li>
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Projeto</li>
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Marca/Status</li>
-					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Preço</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Redução de Custo
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Redução de Risco
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Acessibilidade
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Conveniência/Usabilidade
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Pre&ccedil;o</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Redu&ccedil;&atilde;o de Custo</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Redu&ccedil;&atilde;o de Risco</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Acessibilidade</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Conveni&ecirc;ncia/Usabilidade</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -801,35 +722,18 @@
 			<div class="modal-body">
 				<h5>Que tipo de relacionamento temos com cada um de nossos Clientes?</h5>
 				<h5>O que os segmentos esperam que possamos estabelecer e manter com eles?</h5>
-				<h5>Quais deles nós temos estabelecidos?</h5>
-				<h5>Como eles estão integrados com o restante do nosso modelo de negócio?</h5>
-				<h5>Quanto caros eles são?</h5>
-				<strong>EXEMPLOS:</strong>
+				<h5>Quais deles n&oacute;s temos estabelecidos?</h5>
+				<h5>Como eles est&atilde;o integrados com o restante do nosso modelo de neg&oacute;cio?</h5>
+				<h5>Quanto caros eles s&atilde;o?</h5>
+				<hr />
+				<strong>EXEMPLOS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Assistência pessoal
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Assistência Pessoal Dedicada
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Self-Service
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Serviços Automatizados
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Comunidades
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Co-criação
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Assist&ecirc;ncia pessoal</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Assist&ecirc;ncia Pessoal Dedicada</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Self-Service</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Servi&ccedil;os Automatizados</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Comunidades</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Co-cria&ccedil;&atilde;o</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -851,56 +755,36 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<h5>Através de quais canais de nossos Segmentos de Clientes gostaríamos de atingir?</h5>
-				<h5>Como podemos alcançá-los agora?</h5>
-				<h5>Como os nossos Canais estão integrados?</h5>
+				<h5>Atrav&eacute;s de quais canais de nossos Segmentos de Clientes gostar&iacute;amos de atingir?</h5>
+				<h5>Como podemos alcan&ccedil;&aacute;-los agora?</h5>
+				<h5>Como os nossos Canais est&atilde;o integrados?</h5>
 				<h5>Quais funcionam melhor?</h5>
-				<h5>Quais tem melhor custo-benefício?</h5>
+				<h5>Quais tem melhor custo-benef&iacute;cio?</h5>
 				<h5>Como estamos integrando-os às rotinas do cliente?</h5>
-				</strong>FASES DO CANAL:</strong>
-				<ol>
-					<li>Conscientização</li>
+				<hr />
+				<strong>FASES DO CANAL:</strong>
+				<ul class="list-unstyled">
+					<li>1 - Conscientiza&ccedil;&atilde;o</li>
 					<ul class="list-unstyled">
-						<li>
-							<small>
-								Como podemos aumentar a conscientização sobre os nossos produtos e serviços?
-							</small>
-						</li>
-					</ul>
-
-					<li>Avaliação</li>
+						<li><small>Como podemos aumentar a conscientiza&ccedil;&atilde;o sobre os nossos produtos e servi&ccedil;os?</small></li>
+					</ul>		
+					<li>2 - Avalia&ccedil;&atilde;o</li>
 					<ul class="list-unstyled">
-						<li>
-							<small>
-								Como podemos ajudar os clientes a avaliar a Proposta de Valor da nossa organização?
-							</small>
-						</li>
+						<li><small>Como podemos ajudar os clientes a avaliar a Proposta de Valor da nossa organiza&ccedil;&atilde;o?</small></li>
 					</ul>
-					<li>Compra</li>
+					<li>3 - Compra</li>
 					<ul class="list-unstyled">
-						<li>
-							<small>
-								Como podemos permitir que os clientes comprem produtos e serviços específicos?
-							</small>
-						</li>
+						<li><small>Como podemos permitir que os clientes comprem produtos e servi&ccedil;os espec&iacute;ficos?</small></li>
 					</ul>
-					<li>Entrega</li>
+					<li>4 - Entrega</li>
 					<ul class="list-unstyled">
-						<li>
-							<small>
-								Como entregaremos uma Proposta de Valor para nossos clientes?
-							</small>
-						</li>
+						<li><small>Como entregaremos uma Proposta de Valor para nossos clientes?</small></li>
 					</ul>
-					<li>Pós-venda</li>
+					<li>5 - P&oacute;s-venda</li>
 					<ul class="list-unstyled">
-						<li>
-							<small>
-								Como podemos oferecer suporte pós-venda aos nossos clientes?
-							</small>
-						</li>
+						<li><small>Como podemos oferecer suporte p&oacute;s-venda aos nossos clientes?</small></li>
 					</ul>
-				</ol>
+				</ul>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -924,16 +808,10 @@
 			</div>
 			<div class="modal-body">
 				<h5>Para quem estamos criando valor?</h5>
-				<h5>Quem são nossos clientes mais importantes?</h5>
+				<h5>Quem s&atilde;o nossos clientes mais importantes?</h5>
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Mercado de massa
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Nicho de mercado
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Mercado de massa</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Nicho de mercado</li>
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Segmentado</li>
 					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Diversificado</li>
 				</ul>
@@ -958,39 +836,22 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<h5>Quais são os custos mais importantes inerentes ao nosso modelo de negócio?</h5>
-				<h5>Quais são os Recursos Chave mais caros?</h5>
-				<h5>Quais são as Atividades Chave mais caras?</h5>
-				<strong>SEU NEGÓCIO É MAIS:</strong>
+				<h5>Quais s&atilde;o os custos mais importantes inerentes ao nosso modelo de neg&oacute;cio?</h5>
+				<h5>Quais s&atilde;o os Recursos Chave mais caros?</h5>
+				<h5>Quais s&atilde;o as Atividades Chave mais caras?</h5>
+				<hr />
+				<strong>SEU NEG&Oacute;CIO &Eacute; MAIS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Guiado por Custos (estrutura de custo mais enxuta, proposta de valor de
-						baixo preço, máxima automação, terceirização extensiva)
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Guiado por Valor (focada na criação de valor, proposta de valor premium)
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Guiado por Custos (estrutura de custo mais enxuta, proposta de valor de baixo pre&ccedil;o, máxima automa&ccedil;&atilde;o, terceiriza&ccedil;&atilde;o extensiva)</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Guiado por Valor (focada na cria&ccedil;&atilde;o de valor, proposta de valor premium)</li>
 				</ul>
-				<strong>EXEMPLOS DE CARACTERÍSTICAS:</strong>
+				<hr />
+				<strong>EXEMPLOS DE CARACTER&Iacute;STICAS:</strong>
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Custos Fixos (salários, aluguéis, serviços públicos)
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Custos Variáveis
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Economias de escala
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Economias de escopo
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Custos Fixos (sal&aacute;rios, alugu&eacute;is, servi&ccedil;os p&uacute;blicos)</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Custos Vari&aacute;veis</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Economias de escala</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Economias de escopo</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -1013,75 +874,36 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				<h5>Por quais valores nossos clientes estão realmente interessados em pagar?</h5>
+				<h5>Por quais valores nossos clientes est&atilde;o realmente interessados em pagar?</h5>
 				<h5>Por quais eles pagam atualmente?</h5>
-				<h5>Como eles estão pagando atualmente?</h5>
+				<h5>Como eles est&atilde;o pagando atualmente?</h5>
 				<h5>Como eles gostariam de pagar?</h5>
 				<h5>Como cada fluxo de receita contribui para a receita global?</h5>
-				<strong>TIPOS:</strong>
+				<hr />
+				<strong>TIPOS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Venda de ativos
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Taxa de utilização
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Taxas de inscrição
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Empréstimos / Aluguel / Arrendamento
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Licenciamento
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Taxas de corretagem
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Publicidade
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Venda de ativos</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxa de utiliza&ccedil;&atilde;o</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxas de inscri&ccedil;&atilde;o</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Empr&eacute;stimos / Aluguel / Arrendamento</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Licenciamento</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxas de corretagem</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Publicidade</li>
 				</ul>
-				<strong>PREÇOS FIXOS:</strong>
+				<hr />
+				<strong>PREÇOS FIXOS:</strong> 
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Preço de tabela
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Produtos dependentes
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Segmentos de Clientes dependentes
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Volumes dependentes
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Pre&ccedil;o de tabela</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Produtos dependentes</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Segmentos de Clientes dependentes</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Volumes dependentes</li>
 				</ul>
+				<hr />
 				<strong>PRECIFICAÇÃO DINÂMICA:</strong>
 				<ul class="list-unstyled">
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Negociação (barganha)
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Gestão de Rendimentos
-					</li>
-					<li>
-						<span class="glyphicon glyphicon-star-empty"></span>&nbsp;
-						Mercado em Tempo Real
-					</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Negocia&ccedil;&atilde;o (barganha)</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Gest&atilde;o de Rendimentos</li>
+					<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Mercado em Tempo Real</li>
 				</ul>
 			</div>
 			<div class="modal-footer">
@@ -1256,4 +1078,13 @@
       		</div>
     	</div>
   	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12 kz_center">
+		<br />
+		<a ng-href="#/" class="btn btn-default">
+    		<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+    	</a>
+    </div>
 </div>
