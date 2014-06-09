@@ -34,6 +34,9 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
     if( projeto !== false ) {
       projeto.nome = obj.nome;
       projeto.descricao = obj.descricao;
+      if( obj.itens ) {
+        projeto.itens = obj.itens;
+      }
       var projetos = this.obterProjetos();
       projetos[ index ] = angular.toJson( projeto );
       this.definirProjetos( projetos );
