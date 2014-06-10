@@ -6,9 +6,21 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', 'canvasService', 
-	function( $scope, canvasService ) {
+kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '$location', 'canvasService', 'projetoCanvasService',
+	function( $scope, $routeParams, $location, canvasService, projetoCanvasService ) {
 	  
-	  //TODO
+	/**
+	 * Carrega um projeto canvas para visualização do canvas.
+	 * @method carregarProjeto
+	 */
+	$scope.carregarProjeto = function() {
+		$scope.index = parseInt( $routeParams.index, 10 );
+		$scope.projeto = projetoCanvasService.obterProjetoJson( $scope.index );
+		if( $scope.projeto === false ) {
+			$location.path( '/' );
+		}	
+	};
+
+	$scope.carregarProjeto();
 	  
 }]);

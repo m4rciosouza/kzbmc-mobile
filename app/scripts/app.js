@@ -25,9 +25,17 @@ kzbmcMobileApp.config(function ($routeProvider) {
         templateUrl: 'views/projetos-canvas/remover.html',
         controller: 'ProjetosCanvasRemoverCtrl'
       })
-      .when('/canvas/:id', {
-        templateUrl: 'views/canvas.html',
-        controller: 'CanvasCtrl'
+      .when('/canvas/:index', {
+        templateUrl: 'views/canvas/visualizar.html',
+        controller: 'CanvasVisualizarCtrl'
+      })
+      .when('/cadastrar-item-canvas/:index/:tipo', {
+        templateUrl: 'views/canvas/cadastrar.html',
+        controller: 'CanvasCadastrarCtrl'
+      })
+      .when('/editar-remover-item-canvas/:index/:tipo', {
+        templateUrl: 'views/canvas/editar-remover.html',
+        controller: 'ProjetosCanvasEditarRemoverCtrl'
       })
       .when('/ajuda', {
         templateUrl: 'views/ajuda/index.html'
