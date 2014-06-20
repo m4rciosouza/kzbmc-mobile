@@ -6,8 +6,8 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '$location', 'canvasService', 'projetoCanvasService',
-	function( $scope, $routeParams, $location, canvasService, projetoCanvasService ) {
+kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '$location', 'projetoCanvasService',
+	function( $scope, $routeParams, $location, projetoCanvasService ) {
 	  
 	/**
 	 * Carrega um projeto canvas para visualização do canvas.
@@ -20,6 +20,16 @@ kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '
 			$location.path( '/' );
 		}	
 	};
+
+	/**
+	 * Objeto utilizado para a atualização da ordem dos itens de uma área do canvas quando ordenado.
+	 */
+	$scope.sortableOptions = {
+        stop : function() {
+                projetoCanvasService.atualizar( $scope.projeto, $scope.index );
+              },
+        axis : 'y',
+      };
 
 	$scope.carregarProjeto();
 	  

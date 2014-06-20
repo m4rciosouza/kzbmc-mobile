@@ -42,8 +42,8 @@
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
 		      					-->
-		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/pc" class="btn btn-primary">
-			               			<span class="glyphicon glyphicon-pencil"></span>
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/pc/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
 			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
@@ -55,10 +55,16 @@
 					<h5>
 						Atividades<br />Chave
 					</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ac', 'Adicionar item de Atividades Chave')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/ac" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#atividadesChave" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -77,10 +83,8 @@
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
 		      					-->
-		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ac" class="btn btn-primary">
-			               			<span class="glyphicon glyphicon-pencil"></span>
-			               			&nbsp;|&nbsp;
-			               			<span class="glyphicon glyphicon-remove"></span>
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ac/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
 			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
@@ -92,10 +96,17 @@
 					<h5>
 						Propostas<br />de Valor
 					</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('pv', 'Adicionar item de Propostas de Valor')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
-					</a> 
+					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/pv" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#propostasValor" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -103,6 +114,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.pv" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('pv', 'Editar item de Propostas de Valor', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -112,6 +124,10 @@
 		      						ng-click="modalEdit('pv', 'Remover item de Propostas de Valor', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/pv/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -122,10 +138,17 @@
 					<h5>
 						Relacionamento<br />com os Clientes
 					</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('rcl', 'Adicionar item de Relacionamento com os Clientes')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/rcl" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#relacionamentoClientes" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -133,6 +156,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.rcl" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('rcl', 'Editar item de Relacionamento com os Clientes', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -142,6 +166,10 @@
 		      						ng-click="modalEdit('rcl', 'Remover item de Relacionamento com os Clientes', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/rcl/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -152,10 +180,17 @@
 					<h5>
 						Segmentos<br />de Clientes
 					</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('sc', 'Adicionar item de Segmentos de Clientes')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/sc" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#segmentosClientes" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -163,6 +198,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.sc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('sc', 'Editar item de Segmentos de Clientes', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -172,6 +208,10 @@
 		      						ng-click="modalEdit('sc', 'Remover item de Segmentos de Clientes', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/sc/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -184,10 +224,17 @@
 					<h5>
 						Recursos<br />Chave
 					</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('rc', 'Adicionar item de Recursos Chave')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/rc" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#recursosChave" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -195,6 +242,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.rc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('rc', 'Editar item de Recursos Chave', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -204,6 +252,10 @@
 		      						ng-click="modalEdit('rc', 'Remover item de Recursos Chave', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/rc/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -212,10 +264,17 @@
 				<td class="kz_td kz_width_20 kz_border">
 					<img ng-src="images/canais.png" alt="Canais" class="kz_img_position" />
 					<h5>Canais</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ca', 'Adicionar item de Canais')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/ca" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#canais" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -223,6 +282,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.ca" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('ca', 'Editar item de Canais', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -232,6 +292,10 @@
 		      						ng-click="modalEdit('ca', 'Remover item de Canais', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ca/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -247,10 +311,17 @@
 				<td class="kz_td kz_width_50 kz_border_right">
 					<img ng-src="images/estrutura_custo.png" alt="Estrutura de Custo" class="kz_img_position" />
 					<h5>Estrutura de Custo</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('ec', 'Adicionar item de Estrutura de Custo')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/ec" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#estruturaCusto" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -258,6 +329,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.ec" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('ec', 'Editar item de Estrutura de Custo', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -267,6 +339,10 @@
 		      						ng-click="modalEdit('ec', 'Remover item de Estrutura de Custo', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ec/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -275,10 +351,17 @@
 				<td class="kz_td kz_width_50">
 					<img ng-src="images/fluxo_receita.png" alt="Fluxo de Receita" class="kz_img_position" />
 					<h5>Fluxo de Receita</h5>
+					<!--
 					<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 						ng-click="modalAdd('fr', 'Adicionar item de Fluxo de Receita')">
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
 					</a>
+					-->
+
+					<a ng-href="#/cadastrar-item-canvas/{{index}}/fr" class="btn btn-primary">
+               			&nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;
+              		</a>
+
 					<a href="" data-toggle="modal" data-target="#fluxoReceita" class="btn btn-primary"> 
 						&nbsp;&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;
 					</a>
@@ -286,6 +369,7 @@
 					<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr" style="margin-top: 10px;">
 						<div ng-repeat="item in projeto.itens.fr" class="alert alert-{{item.cor}} kz_mouse_cursor">
 							<p style="text-align : right;">
+								<!--
 								<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 									ng-click="modalEdit('fr', 'Editar item de Fluxo de Receita', $index)">
 									<span class="glyphicon glyphicon-pencil"></span>
@@ -295,6 +379,10 @@
 		      						ng-click="modalEdit('fr', 'Remover item de Fluxo de Receita', $index)">
 		      						<span class="glyphicon glyphicon-remove"></span>
 		      					</a>
+		      					-->
+		      					<a ng-href="#/editar-remover-item-canvas/{{index}}/fr/{{$index}}" class="btn btn-primary">
+			               			&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
+			              		</a>
 		      				</p>
 		      				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
 		    			</div>
@@ -314,14 +402,21 @@
 			<h5>
 				Parceiros<br />Chave
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('pc', 'Adicionar item de Parceiros Chave')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/pc" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.pc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('pc', 'Editar item de Parceiros Chave', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -331,6 +426,11 @@
       						ng-click="modalEdit('pc', 'Remover item de Parceiros Chave', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/pc/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -345,14 +445,21 @@
 			<h5>
 				Atividades<br />Chave
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ac', 'Adicionar item de Atividades Chave')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/ac" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ac" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ac" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('ac', 'Editar item de Atividades Chave', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -362,6 +469,11 @@
       						ng-click="modalEdit('ac', 'Remover item de Atividades Chave', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ac/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -376,14 +488,21 @@
 			<h5>
 				Recursos<br />Chave
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('rc', 'Adicionar item de Recursos Chave')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/rc" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.rc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('rc', 'Editar item de Recursos Chave', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -393,6 +512,11 @@
       						ng-click="modalEdit('rc', 'Remover item de Recursos Chave', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/rc/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -407,14 +531,21 @@
 			<h5>
 				Propostas<br />de Valor
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('pv', 'Adicionar item de Propostas de Valor')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/pv" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.pv" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.pv" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('pv', 'Editar item de Propostas de Valor', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -424,6 +555,11 @@
       						ng-click="modalEdit('pv', 'Remover item de Propostas de Valor', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/pv/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -438,14 +574,21 @@
 			<h5>
 				Relacionamento<br />com os Clientes
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('rcl', 'Adicionar item de Relacionamento com os Clientes')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/rcl" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.rcl" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.rcl" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('rcl', 'Editar item de Relacionamento com os Clientes', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -455,6 +598,11 @@
       						ng-click="modalEdit('rcl', 'Remover item de Relacionamento com os Clientes', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/rcl/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -467,14 +615,21 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/canais.png" alt="Canais" class="kz_img_position" />
 			<h5>Canais</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ca', 'Adicionar item de Canais')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/ca" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ca" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ca" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('ca', 'Editar item de Canais', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -484,6 +639,11 @@
       						ng-click="modalEdit('ca', 'Remover item de Canais', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ca/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -498,14 +658,21 @@
 			<h5>
 				Segmentos<br />de Clientes
 			</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('sc', 'Adicionar item de Segmentos de Clientes')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/sc" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.sc" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.sc" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('sc', 'Editar item de Segmentos de Clientes', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -515,6 +682,11 @@
       						ng-click="modalEdit('sc', 'Remover item de Segmentos de Clientes', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/sc/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -527,14 +699,21 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/estrutura_custo.png" alt="Estrutura de Custo" class="kz_img_position" />
 			<h5>Estrutura de Custo</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('ec', 'Adicionar item de Estrutura de Custo')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/ec" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.ec" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.ec" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('ec', 'Editar item de Estrutura de Custo', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -544,6 +723,11 @@
       						ng-click="modalEdit('ec', 'Remover item de Estrutura de Custo', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/ec/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>
@@ -556,14 +740,21 @@
 		<div class="col-xs-12 kz_border_top">
 			<img ng-src="images/fluxo_receita.png" alt="Fluxo de Receita" class="kz_img_position" />
 			<h5>Fluxo de Receita</h5>
+			<!--
 			<a href="" data-toggle="modal" data-target="#adicionarItem" class="btn btn-primary"
 				ng-click="modalAdd('fr', 'Adicionar item de Fluxo de Receita')">
 				<span class="glyphicon glyphicon-plus"></span> Adicionar
 			</a>
+			-->
+
+			<a ng-href="#/cadastrar-item-canvas/{{index}}/fr" class="btn btn-primary">
+               	<span class="glyphicon glyphicon-plus"></span> Adicionar
+            </a>
 			
 			<div ui-sortable="sortableOptions" ng-model="projeto.itens.fr" style="margin-top: 10px;">
 				<div ng-repeat="item in projeto.itens.fr" class="alert alert-{{item.cor}} kz_mouse_cursor">
 					<p style="text-align : right;">
+						<!--
 						<a href="" data-toggle="modal" data-target="#editarItem" alt="Editar" title="Editar"
 							ng-click="modalEdit('fr', 'Editar item de Fluxo de Receita', $index)">
 							<span class="glyphicon glyphicon-pencil"></span>
@@ -573,6 +764,11 @@
       						ng-click="modalEdit('fr', 'Remover item de Fluxo de Receita', $index)">
       						<span class="glyphicon glyphicon-remove"></span>
       					</a>
+      					-->
+      					<a ng-href="#/editar-remover-item-canvas/{{index}}/fr/{{$index}}" class="btn btn-primary">
+			               	<span class="glyphicon glyphicon-pencil"></span> Editar | 
+			               	<span class="glyphicon glyphicon-remove"></span> Remover
+			            </a>
       				</p>
       				<strong>{{item.titulo}}</strong><br />{{item.descricao}}
     			</div>

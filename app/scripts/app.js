@@ -29,11 +29,11 @@ kzbmcMobileApp.config(function ($routeProvider) {
         templateUrl: 'views/canvas/visualizar.html',
         controller: 'CanvasVisualizarCtrl'
       })
-      .when('/cadastrar-item-canvas/:index/:tipo', {
+      .when('/cadastrar-item-canvas/:projetoId/:tipo', {
         templateUrl: 'views/canvas/cadastrar.html',
         controller: 'CanvasCadastrarCtrl'
       })
-      .when('/editar-remover-item-canvas/:index/:tipo', {
+      .when('/editar-remover-item-canvas/:projetoId/:tipo/:itemId', {
         templateUrl: 'views/canvas/editar-remover.html',
         controller: 'ProjetosCanvasEditarRemoverCtrl'
       })

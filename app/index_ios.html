@@ -28,373 +28,88 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header">
-    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kz-navbar-collapse">
-      			<span class="sr-only">Toggle navigation</span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-    		</button>
-    		<a class="navbar-brand" href="index.html">KZ-Canvas</a>
-  		</div>
-  		<div class="collapse navbar-collapse" id="kz-navbar-collapse">
-    		<ul class="nav navbar-nav">
-    			<li><a ng-href="index.html">Inicial</a></li>
-     			<!-- <li><a href="" data-toggle="modal" data-target="#sincronizarDados">Sincronizar Dados</a></li> -->
-    			<li><a href="" data-toggle="modal" data-target="#ajuda">Ajuda</a></li>
-      		</ul>
-      	</div><!-- /.navbar-collapse -->
-  	</nav>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kz-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KZ-Canvas</a>
+      </div>
+      <div class="collapse navbar-collapse" id="kz-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a ng-href="index.html">Inicial</a></li>
+          <!-- <li><a href="" data-toggle="modal" data-target="#sincronizarDados">Sincronizar Dados</a></li> -->
+          <li><a ng-href="#ajuda" title="Ajuda">Ajuda</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
 
-	<!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>	
-		
-	<!-- Page Footer -->
-	<div class="kz_page_footer kz_center">
-		<p>&copy; <a href="http://kazale.com" title="Kazale" alt="Kazale" target="_blank">Kazale.com</a> 2013. Todos os direitos reservados</p>
-	</div>
-	
-	<!-- Sincronizar dados -->
-	<div class="modal fade" id="sincronizarDados" tabindex="-1" role="dialog" aria-labelledby="sincronizarDadosLabel" aria-hidden="true">
-		<div class="modal-dialog">
-    		<div class="modal-content">
-    			<div class="modal-header">
-      				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        			<h4 class="modal-title" id="sincronizarDadosLabel">
-        				Sincronizar Dados
-        			</h4>
-      			</div>
-      			<div class="modal-body">
-      				<p>Sincronizando o seu Canvas de Modelo de Negócios em nosso sistema online você será capaz de
-      				editar os seus modelos canvas online e que qualquer lugar ou dispositivo, compartilhar com seus amigos, 
-      				imprimi-lo, além de manter uma cópia de segurança de seu Canvas.</p>
-      				<p>Para sincronizar os dados cadastre-se gratuitamente <a href="" target="_blank">aqui</a> 
-      				para obter sua API Key, um código necessário para identificar e sincronizar seus modelos canvas em sua 
-      				conta online.</p>
-      				<form role="form">
-        				<div class="form-group">
-    						<label for="nome">API Key</label>
-    						<input type="text" placeholder="Entre com sua API Key..." class="form-control" id="nome" name="nome" maxlength="32" />
-  						</div>
-        			</form>
-        			<p><small><em>* Cadastre-se gratuitamente <a href="" target="_blank">aqui</a>, digite sua API Key acima e 
-        			clique em "Sincronizar Dados" para expandir as possibilidades de seu modelo canvas.</em></small></p>
-      			</div>
-      			<div class="modal-footer">
-      				<button type="button" class="btn btn-primary">Sincronizar Dados</button>
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      			</div>
-    		</div>
-  		</div>
-	</div>
-	
-	<!-- Ajuda -->
-	<div class="modal fade" id="ajuda" tabindex="-1" role="dialog" aria-labelledby="ajudaLabel" aria-hidden="true">
-		<div class="modal-dialog">
-    		<div class="modal-content">
-      			<div class="modal-header">
-      				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        			<h4 class="modal-title" id="ajudaLabel">
-        				Ajuda
-        			</h4>
-      			</div>
-      			<div class="modal-body">
-        			<p>Sugestão de ordem do preenchimento do Canvas de Modelo de Negócios</p>
-        			<p>Embora não exista uma ordem definida à ser utilizada para o preenchimento de um 
-        			Canvas de Modelo de Negócios, sugerimos a sequencia abaixo, que possui um fluxo 
-        			intuitivo de raciocínio para o correto preenchimento do Canvas.</p>			
-        			<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-          								1 - Segmentos de Clientes
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseOne" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Para quem estamos criando valor?</h5>
-									<h5>Quem são nossos clientes mais importantes?</h5>
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Mercado de massa</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Nicho de mercado</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Segmentado</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Diversificado</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          								2 – Propostas de Valor
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseTwo" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Que valores nós entregamos ao cliente?</h5>
-									<h5>Quais problemas dos nossos clientes estamos ajudando a resolver?</h5>
-									<h5>Quais pacotes de produtos e serviços oferecemos a cada Segmento de Cliente?</h5>
-									<h5>Quais necessidades dos clientes estamos satisfazendo?</h5>
-									<strong>CARACTERÍSTICAS:</strong>
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Novidade</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Performance</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Personalização</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;"Realizando os Trabalhos"</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Projeto</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Marca/Status</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Preço</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Redução de Custo</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Redução de Risco</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Acessibilidade</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Conveniência/Usabilidade</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          								3 – Canais
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseThree" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Através de quais canais de nossos Segmentos de Clientes gostaríamos de atingir?</h5>
-									<h5>Como podemos alcançá-los agora?</h5>
-									<h5>Como os nossos Canais estão integrados?</h5>
-									<h5>Quais funcionam melhor?</h5>
-									<h5>Quais tem melhor custo-benefício?</h5>
-									<h5>Como estamos integrando-os às rotinas do cliente?</h5>
-									</strong>FASES DO CANAL:</strong>
-									<ol>
-										<li>Conscientização</li>
-										<ul class="list-unstyled">
-											<li><small>Como podemos aumentar a conscientização sobre os nossos produtos e serviços?</small></li>
-										</ul>		
-										<li>Avaliação</li>
-										<ul class="list-unstyled">
-											<li><small>Como podemos ajudar os clientes a avaliar a Proposta de Valor da nossa organização?</small></li>
-										</ul>
-										<li>Compra</li>
-										<ul class="list-unstyled">
-											<li><small>Como podemos permitir que os clientes comprem produtos e serviços específicos?</small></li>
-										</ul>
-										<li>Entrega</li>
-										<ul class="list-unstyled">
-											<li><small>Como entregaremos uma Proposta de Valor para nossos clientes?</small></li>
-										</ul>
-										<li>Pós-venda</li>
-										<ul class="list-unstyled">
-											<li><small>Como podemos oferecer suporte pós-venda aos nossos clientes?</small></li>
-										</ul>
-									</ol>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-          								4 – Relacionamento com os Clientes
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseFour" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Que tipo de relacionamento temos com cada um de nossos Clientes?</h5>
-									<h5>O que os segmentos esperam que possamos estabelecer e manter com eles?</h5>
-									<h5>Quais deles nós temos estabelecidos?</h5>
-									<h5>Como eles estão integrados com o restante do nosso modelo de negócio?</h5>
-									<h5>Quanto caros eles são?</h5>
-									<strong>EXEMPLOS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Assistência pessoal</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Assistência Pessoal Dedicada</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Self-Service</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Serviços Automatizados</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Comunidades</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Co-criação</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-          								5 – Recursos Chave
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseFive" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Quais Recursos Chave nossa Proposta de Valor requer?</h5>
-									<h5>Nossos canais de distribuição?</h5>
-									<h5>Relacionamento com os Clientes?</h5>
-									<h5>Fontes de receita?</h5>
-									<strong>TIPOS DE RECURSOS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Físico</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Intelectual (patentes de marcas, direitos autorais, dados)</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Humano</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Financeiro</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
-          								6 – Atividades Chave
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseSix" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Quais Atividades Chave nossa Proposta de Valor exige?</h5>
-									<h5>Nossos Canais de Distribuição?</h5>
-									<h5>Relacionamento com o Cliente?</h5>
-									<h5>Fontes de receita?</h5>
-									<strong>CATEGORIAS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Produção</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Resolução de Problemas</li> 
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Plataforma / Rede</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
-          								7 – Parceiros Chave
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseSeven" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Quem são os nossos Parceiros Chave?</h5>
-									<h5>Quem são os nossos Fornecedores Chave?</h5>
-									<h5>Quais Recursos Chave estamos adquirindo de parceiros?</h5>
-									<h5>Quais Atividades Chave os parceiros realizam?</h5>
-									<strong>MOTIVAÇÕES PARA PARCERIAS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Otimização e economia</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Redução de risco e incerteza</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Aquisição de recursos particulares e atividades</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
-          								8 – Estrutura de Custo
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseEight" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Quais são os custos mais importantes inerentes ao nosso modelo de negócio?</h5>
-									<h5>Quais são os Recursos Chave mais caros?</h5>
-									<h5>Quais são as Atividades Chave mais caras?</h5>
-									<strong>SEU NEGÓCIO É MAIS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Guiado por Custos (estrutura de custo mais enxuta, proposta de valor de baixo preço, máxima automação, terceirização extensiva)</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Guiado por Valor (focada na criação de valor, proposta de valor premium)</li>
-									</ul>
-									<strong>EXEMPLOS DE CARACTERÍSTICAS:</strong>
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Custos Fixos (salários, aluguéis, serviços públicos)</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Custos Variáveis</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Economias de escala</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Economias de escopo</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-  						<div class="panel panel-default">
-    						<div class="panel-heading">
-      							<h4 class="panel-title">
-        							<a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">
-          								9 – Fluxo de Receita
-        							</a>
-      							</h4>
-    						</div>
-    						<div id="collapseNine" class="panel-collapse collapse">
-      							<div class="panel-body">
-        							<h5>Por quais valores nossos clientes estão realmente interessados em pagar?</h5>
-									<h5>Por quais eles pagam atualmente?</h5>
-									<h5>Como eles estão pagando atualmente?</h5>
-									<h5>Como eles gostariam de pagar?</h5>
-									<h5>Como cada fluxo de receita contribui para a receita global?</h5>
-									<strong>TIPOS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Venda de ativos</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxa de utilização</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxas de inscrição</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Empréstimos / Aluguel / Arrendamento</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Licenciamento</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Taxas de corretagem</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Publicidade</li>
-									</ul>
-									<strong>PREÇOS FIXOS:</strong> 
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Preço de tabela</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Produtos dependentes</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Segmentos de Clientes dependentes</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Volumes dependentes</li>
-									</ul>
-									<strong>PRECIFICAÇÃO DINÂMICA:</strong>
-									<ul class="list-unstyled">
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Negociação (barganha)</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Gestão de Rendimentos</li>
-										<li><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Mercado em Tempo Real</li>
-									</ul>
-      							</div>
-    						</div>
-  						</div>
-					</div>		
-      			</div>
-      			<div class="modal-footer">
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      			</div>
-    		</div>
-  		</div>
-	</div>
-	
-	<!-- Modal -->
-	<div class="modal fade" id="installApp" tabindex="-1" role="dialog" aria-labelledby="installAppLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title" id="installAppLabel">Instalar Aplicativo</h4>
-	      </div>
-	      <div class="modal-body">
-	      	Para instalar o aplicativo Canvas de Modelo de Negócios no seu iPhone/iPad clique no botão de 
-	      	bookmarking, que dependendo da versão do seu IOS será 
-	      	<img ng-src="images/book6.png" alt="IOS 6 bookmarking" width="20px" /> ou 
-	      	<img ng-src="images/book7.png" alt="IOS 7 bookmarking" width="20px" /> ( clique em Add to Home Screen ) ,
-	      	um atalho será criado na sua área de trabalho para o acesso ao aplicativo.
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+  <!-- Add your site or application content here -->
+    <div class="container" ng-view=""></div>  
+    
+  <!-- Page Footer -->
+  <div class="kz_page_footer kz_center">
+    <p>&copy; <a href="http://kazale.com" title="Kazale" alt="Kazale" target="_blank">Kazale.com</a> 2014. Todos os direitos reservados</p>
+  </div>
+  
+  <!-- Sincronizar dados -->
+  <div class="modal fade" id="sincronizarDados" tabindex="-1" role="dialog" aria-labelledby="sincronizarDadosLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="sincronizarDadosLabel">
+                Sincronizar Dados
+              </h4>
+            </div>
+            <div class="modal-body">
+              <p>Sincronizando o seu Canvas de Modelo de Negócios em nosso sistema online você será capaz de
+              editar os seus modelos canvas online e que qualquer lugar ou dispositivo, compartilhar com seus amigos, 
+              imprimi-lo, além de manter uma cópia de segurança de seu Canvas.</p>
+              <p>Para sincronizar os dados cadastre-se gratuitamente <a href="" target="_blank">aqui</a> 
+              para obter sua API Key, um código necessário para identificar e sincronizar seus modelos canvas em sua 
+              conta online.</p>
+              <form role="form">
+                <div class="form-group">
+                <label for="nome">API Key</label>
+                <input type="text" placeholder="Entre com sua API Key..." class="form-control" id="nome" name="nome" maxlength="32" />
+              </div>
+              </form>
+              <p><small><em>* Cadastre-se gratuitamente <a href="" target="_blank">aqui</a>, digite sua API Key acima e 
+              clique em "Sincronizar Dados" para expandir as possibilidades de seu modelo canvas.</em></small></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Sincronizar Dados</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+      </div>
+  </div>
+  
+  <!-- Modal IOS -->
+  <div class="modal fade" id="installApp" tabindex="-1" role="dialog" aria-labelledby="installAppLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="installAppLabel">Instalar Aplicativo</h4>
+        </div>
+        <div class="modal-body">
+          Para instalar o aplicativo Canvas de Modelo de Negócios no seu iPhone/iPad clique no botão de 
+          bookmarking, que dependendo da versão do seu IOS será 
+          <img ng-src="images/book6.png" alt="IOS 6 bookmarking" width="20px" /> ou 
+          <img ng-src="images/book7.png" alt="IOS 7 bookmarking" width="20px" /> ( clique em Add to Home Screen ) ,
+          um atalho será criado na sua área de trabalho para o acesso ao aplicativo.
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
-    <script src="bower_components/jquery-ui-touch/jquery.ui.touch-punch.min.js"></script>
+    <script src="bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
 
     <!-- build:js scripts/plugins.js -->
@@ -420,19 +135,26 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/canvas.js"></script>
+    <script src="scripts/controllers/projetos-canvas/listar.js"></script>
+    <script src="scripts/controllers/projetos-canvas/cadastrar.js"></script>
+    <script src="scripts/controllers/projetos-canvas/editar.js"></script>
+    <script src="scripts/controllers/projetos-canvas/remover.js"></script>
+    <script src="scripts/controllers/canvas/visualizar.js"></script>
+    <script src="scripts/controllers/canvas/cadastrar.js"></script>
+    <script src="scripts/controllers/canvas/editar-remover.js"></script>
+    <script src="scripts/services/projeto-canvas.js"></script>
+    <script src="scripts/services/canvas.js"></script>
     <!-- endbuild -->
-    
+
     <script>
     jQuery( document ).ready( function(){
-    	if( ! window.navigator.standalone ) {
-    		jQuery( '#installApp' ).modal( { keyboard : false } );
-    		jQuery( '#installApp' ).on('hidden.bs.modal', function ( e ) {
-    			jQuery( '#installApp' ).modal( 'show' );	
-    		});
-    		jQuery( '#installApp' ).modal( 'show' );
-    	}
+      if( ! window.navigator.standalone ) {
+        jQuery( '#installApp' ).modal( { keyboard : false } );
+        jQuery( '#installApp' ).on('hidden.bs.modal', function ( e ) {
+          jQuery( '#installApp' ).modal( 'show' );  
+        });
+        jQuery( '#installApp' ).modal( 'show' );
+      }
     });
     </script>
 </body>

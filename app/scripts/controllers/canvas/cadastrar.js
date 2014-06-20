@@ -15,9 +15,8 @@ kzbmcMobileApp.controller( 'CanvasCadastrarCtrl', [ '$scope', '$routeParams', '$
 	 * @param {object} item
 	 */
 	$scope.cadastrar = function( item ) {
-		//TODO
-		console.log( item );
-		$location.path( '/' );
+		canvasService.cadastrar( item, $scope.tipo, $scope.projetoId );
+		$location.path( '/canvas/' + $scope.projetoId );
 	};
 
 	/**
@@ -25,10 +24,27 @@ kzbmcMobileApp.controller( 'CanvasCadastrarCtrl', [ '$scope', '$routeParams', '$
 	 * @method carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
-		$scope.index = parseInt( $routeParams.index, 10 );
+		$scope.projetoId = parseInt( $routeParams.projetoId, 10 );
 		$scope.tipo = $routeParams.tipo;
-		$scope.projeto = projetoCanvasService.obterProjetoJson( $scope.index );
-		if( $scope.projeto === false ) {
+		$scope.projeto = projetoCanvasService.obterProjetoJson( $scope.projetoId );
+		this.validarParametros();
+	};
+
+	/**
+	  * Retorna o nome completo de um tipo de item canvas dado sua abreviação.
+	  * @method obterNomeItemPorTipo
+	  */
+	$scope.obterNomeItemPorTipo = function() {
+		return canvasService.obterNomeItemPorTipo( $scope.tipo );
+	};
+
+	/**
+	 * Valida os parâmetros de entrada de uma requisição de cadastro de um novo item.
+	 * @method validarParametros
+	 */
+	$scope.validarParametros = function() {
+		var tipos = [ 'pc', 'ac', 'rc', 'pv', 'rcl', 'ca', 'sc', 'ec', 'fr' ];
+		if( $scope.projeto === false || tipos.indexOf( $scope.tipo ) === -1 ) {
 			$location.path( '/' );
 		}
 	};

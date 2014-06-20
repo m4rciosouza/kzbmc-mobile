@@ -47,7 +47,7 @@ describe('Service: canvas', function () {
     expect( projeto.itens.pc[ 1 ].cor ).toBe( 'info' );
   });
 
-  it( 'should update an canvas item', function() {
+  it( 'should update a canvas item', function() {
     projetoCanvasService.cadastrar( { 'nome' : 'nome', 'descricao' : 'descricao' } ); 
     var obj = { 'titulo' : 'titulo item', 'descricao' : 'descricao item', 'cor' : 'warning' };
     canvasService.cadastrar( obj, 'pc', 0 );

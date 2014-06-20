@@ -54,56 +54,24 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
   };
 
   /**
-   * Retorna a lista de itens de um canvas por tipo.
-   * @method obterItens
-   * @param {integer} tipo
-   * @param {integer} projetoId
-   * @return Literal
-   */
-  /*canvas.obterItens = function( tipo, projetoId ) {
-    var itemObj = '';
-    var projeto = projetoCanvasService.obterProjetoJson( projetoId );
-    switch( tipo ) {
-      case 'pc':
-        itemObj = projeto.itens.pc;
-        break;
-      case 'ac':
-        itemObj = projeto.itens.ac;
-        break;
-      case 'rc':
-        itemObj = projeto.itens.rc;
-        break;
-      case 'pv':
-        itemObj = projeto.itens.pv;
-        break;
-      case 'rcl':
-        itemObj = projeto.itens.rcl;
-        break;
-      case 'ca':
-        itemObj = projeto.itens.ca;
-        break;
-      case 'sc':
-        itemObj = projeto.itens.sc;
-        break;
-      case 'ec':
-        itemObj = projeto.itens.ec;
-        break;
-      case 'fr':
-        itemObj = projeto.itens.fr;
-        break;
-      }
-    return itemObj;
-  };*/
-
-  /**
-   * Retorna a lista de itens de um canvas por tipo no formato json.
-   * @method obterItensJson
+   * Retorna o nome completo de um tipo de item canvas dado sua abreviação.
+   * @method obterNomeItemPorTipo
    * @param {string} tipo
-   * @return object
    */
-  /*canvas.obterItensJson = function( tipo ) {
-    console.log( 'TODO ' + tipo );   
-  };*/
+  canvas.obterNomeItemPorTipo = function( tipo ) {
+    var tipos = { 
+      'pc' : 'Parceiros Chave', 
+      'ac' : 'Atividades Chave', 
+      'rc' : 'Recursos Chave', 
+      'pv' : 'Propostas de Valor', 
+      'rcl' : 'Relacionamento com os Clientes', 
+      'ca' : 'Canais', 
+      'sc' : 'Segmentos de Clientes', 
+      'ec' : 'Estrutura de Custo', 
+      'fr' : 'Fluxo de Receita' 
+    };
+    return tipos[ tipo ];
+  };
 
   return canvas;
 }]);
