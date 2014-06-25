@@ -2,7 +2,23 @@
   	<h1>Criar Novo Canvas</h1>
 </div>
 <div class="kz_content">
-	<div class="row">
+  <div class="row" ng-show="liteVersion && qtdProjetos > 0">
+    <div class="col-xs-12 kz_center">
+      <h3>Vers&atilde;o lite limitada a um projeto. Para criar projetos ilimitados atualize para a vers&atilde;o Enterprise.</h3>
+      <br />
+      <a ng-href="https://play.google.com/store/apps/details?id=com.kazale.kzbmc" target="_blank" class="btn btn-primary">
+        Atualizar vers&atilde;o
+      </a>
+    </div>
+    <div class="col-xs-12 kz_center">
+      <br />
+      <a ng-href="#/" class="btn btn-default">
+        <span class="glyphicon glyphicon-chevron-left"></span> Voltar
+      </a>
+    </div>
+  </div>
+
+	<div class="row" ng-show="!liteVersion || qtdProjetos < 1">
 		<div class="col-xs-12 kz_center">
       		<form role="form" name="form" novalidate>
         		<div class="form-group">
@@ -21,8 +37,10 @@
   					<button type="button" class="btn btn-primary" data-dismiss="modal" 
       					ng-click="cadastrar(canvas)" ng-disabled="form.$invalid">
       					Criar
-      				</button>
-  					<a ng-href="#/" class="btn btn-primary">Cancelar</a>
+      			</button>
+  					<a ng-href="#/" class="btn btn-default">
+              <span class="glyphicon glyphicon-chevron-left"></span> Voltar
+            </a>
   				</div>
         	</form>
 		</div>

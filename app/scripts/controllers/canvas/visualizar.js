@@ -6,7 +6,7 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '$location', 'projetoCanvasService',
+angular.module( 'kzbmcMobileApp' ).controller( 'CanvasVisualizarCtrl', [ '$scope', '$routeParams', '$location', 'projetoCanvasService',
 	function( $scope, $routeParams, $location, projetoCanvasService ) {
 	  
 	/**

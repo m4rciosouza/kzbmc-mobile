@@ -6,7 +6,7 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller( 'ProjetosCanvasListarCtrl', [ '$scope', 'projetoCanvasService', 
+angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasListarCtrl', [ '$scope', 'projetoCanvasService', 
 	function( $scope, projetoCanvasService ) {
 	  
 	  	/**

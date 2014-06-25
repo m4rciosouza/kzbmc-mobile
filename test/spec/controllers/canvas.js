@@ -2,8 +2,10 @@
 
 describe('Controller: CanvasCtrl', function () {
 
+	// it is only kept as sample for some kind of tests.
+
   // load the controller's module
-  beforeEach(module('kzbmcMobileApp'));
+  /*beforeEach(module('kzbmcMobileApp'));
 
   var CanvasCtrl,
     scope;
@@ -76,5 +78,5 @@ describe('Controller: CanvasCtrl', function () {
 	  scope.index = 0;
 	  scope.remover();
 	  expect( scope.projeto.itens.pc.length ).toBe( 0 );
-  });
+  });*/
 });

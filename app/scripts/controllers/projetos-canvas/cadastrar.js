@@ -6,19 +6,22 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller( 'ProjetosCanvasCadastrarCtrl', [ '$scope', '$location', 'projetoCanvasService', 
+angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasCadastrarCtrl', [ '$scope', '$location', 'projetoCanvasService', 
 		function( $scope, $location, projetoCanvasService ) {
 	  
-	  /**
-	   * Cadastra um novo projeto canvas.
-	   * @method cadastrar
-	   * @param {object} canvas
-	   */
-	  $scope.cadastrar = function( canvas ) {
-		  if( $scope.form.$valid ) {
-			  var canvasObj = { 'nome' : canvas.nome, 'descricao' : canvas.descricao };
-			  projetoCanvasService.cadastrar( canvasObj );
-			  $location.path( '/' );
-		  }
-	  };
-  }]);
+	$scope.liteVersion = false;
+	$scope.qtdProjetos = projetoCanvasService.obterProjetos().length;
+
+	/**
+	 * Cadastra um novo projeto canvas.
+	 * @method cadastrar
+	 * @param {object} canvas
+	 */
+	$scope.cadastrar = function( canvas ) {
+		if( $scope.form.$valid ) {
+			var canvasObj = { 'nome' : canvas.nome, 'descricao' : canvas.descricao };
+			projetoCanvasService.cadastrar( canvasObj );
+			$location.path( '/' );
+		}
+	};
+}]);

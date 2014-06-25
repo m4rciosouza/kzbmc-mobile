@@ -6,7 +6,7 @@
  */
 'use strict';
 
-kzbmcMobileApp.controller('ProjetosCanvasEditarRemoverCtrl', [ '$scope', '$location', '$routeParams', 'canvasService', 'projetoCanvasService', 
+angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl', [ '$scope', '$location', '$routeParams', 'canvasService', 'projetoCanvasService', 
 		function( $scope, $location, $routeParams, canvasService, projetoCanvasService ) {
 	   
     /**
@@ -15,7 +15,7 @@ kzbmcMobileApp.controller('ProjetosCanvasEditarRemoverCtrl', [ '$scope', '$locat
 	 * @param {object} item
 	 */
     $scope.atualizar = function( item ) {
-		canvasService.atualizar( item, $scope.itemId, $scope.tipo, $scope.projetoId ) 
+		canvasService.atualizar( item, $scope.itemId, $scope.tipo, $scope.projetoId );
 		$location.path( '/canvas/' + $scope.projetoId );
 	};
 
