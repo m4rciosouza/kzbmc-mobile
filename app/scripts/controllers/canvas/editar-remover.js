@@ -6,12 +6,12 @@
  */
 'use strict';
 
-angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl', [ '$scope', '$location', '$routeParams', 'canvasService', 'projetoCanvasService', 
+angular.module( 'kzbmcMobileApp' ).controller('CanvasEditarRemoverCtrl', [ '$scope', '$location', '$routeParams', 'canvasService', 'projetoCanvasService', 
 		function( $scope, $location, $routeParams, canvasService, projetoCanvasService ) {
 	   
     /**
 	 * Atualiza os dados de um item canvas.
-	 * @method atualizar
+	 * @method CanvasEditarRemoverCtrl::atualizar
 	 * @param {object} item
 	 */
     $scope.atualizar = function( item ) {
@@ -21,7 +21,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl',
 
 	/**
 	 * Remove um item canvas.
-	 * @method remover
+	 * @method CanvasEditarRemoverCtrl::remover
 	 */
     $scope.remover = function() {
 		canvasService.remover( $scope.itemId, $scope.tipo, $scope.projetoId );
@@ -30,7 +30,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl',
 
 	  /**
 	 * Carrega um projeto canvas para cadastro de um novo item de canvas.
-	 * @method carregarProjeto
+	 * @method CanvasEditarRemoverCtrl::carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
 		$scope.projetoId = parseInt( $routeParams.projetoId, 10 );
@@ -43,7 +43,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl',
 
 	/**
 	 * Valida os parâmetros de entrada de uma requisição de edição/remoção de um item.
-	 * @method validarParametros
+	 * @method CanvasEditarRemoverCtrl::validarParametros
 	 */
 	$scope.validarParametros = function() {
 		var tipos = [ 'pc', 'ac', 'rc', 'pv', 'rcl', 'ca', 'sc', 'ec', 'fr' ];
@@ -55,7 +55,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl',
 
 	/**
 	 * Valida o valor do item de uma requisição de edição/remoção de um item.
-	 * @method ehItemIdValido
+	 * @method CanvasEditarRemoverCtrl::ehItemIdValido
 	 * @return boolean
 	 */
 	$scope.ehItemIdValido = function() {
@@ -68,7 +68,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarRemoverCtrl',
 
 	/**
 	  * Retorna o nome completo de um tipo de item canvas dado sua abreviação.
-	  * @method obterNomeItemPorTipo
+	  * @method CanvasEditarRemoverCtrl::obterNomeItemPorTipo
 	  */
 	$scope.obterNomeItemPorTipo = function() {
 		return canvasService.obterNomeItemPorTipo( $scope.tipo );

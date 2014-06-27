@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarCtrl', [ '$sc
 	  
 	/**
 	 * Carrega um projeto canvas para edição.
-	 * @method carregarProjeto
+	 * @method ProjetosCanvasEditarCtrl::carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
 		$scope.index = parseInt( $routeParams.index, 10 );
@@ -23,7 +23,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasEditarCtrl', [ '$sc
 	  
     /**
 	 * Atualiza os dados de um projeto canvas.
-	 * @method atualizar
+	 * @method ProjetosCanvasEditarCtrl::atualizar
 	 * @param {object} canvas
 	 */
     $scope.atualizar = function( canvas ) {

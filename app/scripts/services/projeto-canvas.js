@@ -12,8 +12,8 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Cadastra um novo projeto canvas.
-   * @method cadastrar
-   * @param {object} obj
+   * @method ProjetoCanvasService::cadastrar
+   * @param {object} obj objeto contendo nome e descrição do projeto a ser cadastrado
    */
   canvas.cadastrar = function( obj ) {
 		var canvasObj = { 'nome' : obj.nome, 'descricao' : obj.descricao, 'itens' : { 'pc' : [], 'ac' : [], 
@@ -25,9 +25,9 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Atualiza os dados de um projeto canvas.
-   * @method atualizar
-   * @param {object} obj
-   * @param {integer} index
+   * @method ProjetoCanvasService::atualizar
+   * @param {object} obj objeto contendo os dados do projeto a ser atualizado
+   * @param {integer} index id do projeto a ser atualizado
    */
   canvas.atualizar = function( obj, index ) {
     var projeto = this.obterProjetoJson( index );
@@ -45,8 +45,8 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Remove um projeto canvas.
-   * @method remover
-   * @param {integer} index
+   * @method ProjetoCanvasService::remover
+   * @param {integer} index id do projeto a ser removido
    */
   canvas.remover = function( index ) {
     var projetos = this.obterProjetos();
@@ -56,7 +56,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Remove todos os projetos canvas cadastrados.
-   * @method removerTodosProjetos
+   * @method ProjetoCanvasService::removerTodosProjetos
    */
   canvas.removerTodosProjetos = function() {
       localStorageService.add( 'projetos', [] );
@@ -64,8 +64,8 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Retorna um projeto com base no índice indicado.
-   * @method obterProjeto
-   * @param {integer} index
+   * @method ProjetoCanvasService::obterProjeto
+   * @param {integer} index id do projeto a ser carregado
    * @return Literal
    */
   canvas.obterProjeto = function( index ) {
@@ -78,8 +78,8 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Retorna um projeto com base no índice indicado no formato json.
-   * @method obterProjetoJson
-   * @param {integer} index
+   * @method ProjetoCanvasService::obterProjetoJson
+   * @param {integer} index id do projeto a ser carregado
    * @return object
    */
   canvas.obterProjetoJson = function( index ) {
@@ -92,7 +92,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Retorna todos os projetos canvas cadastrados.
-   * @method obterProjetos
+   * @method ProjetoCanvasService::obterProjetos
    * @return Array
    */
   canvas.obterProjetos = function() {
@@ -101,7 +101,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Retorna todos os projetos canvas cadastrados no formato json.
-   * @method obterProjetosJson
+   * @method ProjetoCanvasService::obterProjetosJson
    * @return Array de objetos json
    */
   canvas.obterProjetosJson = function() {
@@ -117,7 +117,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'projetoCanvasService', [ 'localStor
 
   /**
    * Persiste os projetos canvas.
-   * @method definirProjetos
+   * @method ProjetoCanvasService::definirProjetos
    * @param {Array} projetos
    */
   canvas.definirProjetos = function( projetos ) {

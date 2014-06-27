@@ -13,7 +13,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
 
   /**
    * Cadastra um novo item no canvas.
-   * @method cadastrar
+   * @method CanvasService::cadastrar
    * @param {object} obj
    * @param {string} tipo
    * @param {integer} projetoId
@@ -27,7 +27,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
 
   /**
    * Atualiza os dados de um item do canvas.
-   * @method atualizar
+   * @method CanvasService::atualizar
    * @param {object} obj
    * @param {integer} objIndex
    * @param {string} tipo
@@ -42,7 +42,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
 
   /**
    * Remove um item do canvas.
-   * @method remover
+   * @method CanvasService::remover
    * @param {integer} objIndex
    * @param {string} tipo
    * @param {integer} projetoId
@@ -55,7 +55,7 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
 
   /**
    * Retorna o nome completo de um tipo de item canvas dado sua abreviação.
-   * @method obterNomeItemPorTipo
+   * @method CanvasService::obterNomeItemPorTipo
    * @param {string} tipo
    */
   canvas.obterNomeItemPorTipo = function( tipo ) {

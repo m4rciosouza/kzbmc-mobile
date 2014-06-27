@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'CanvasCadastrarCtrl', [ '$scope'
 	  
 	/**
 	 * Cadastra um novo item no canvas.
-	 * @method cadastrar
+	 * @method CanvasCadastrarCtrl::cadastrar
 	 * @param {object} item
 	 */
 	$scope.cadastrar = function( item ) {
@@ -21,7 +21,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'CanvasCadastrarCtrl', [ '$scope'
 
 	/**
 	 * Carrega um projeto canvas para cadastro de um novo item de canvas.
-	 * @method carregarProjeto
+	 * @method CanvasCadastrarCtrl::carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
 		$scope.projetoId = parseInt( $routeParams.projetoId, 10 );
@@ -32,7 +32,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'CanvasCadastrarCtrl', [ '$scope'
 
 	/**
 	  * Retorna o nome completo de um tipo de item canvas dado sua abreviação.
-	  * @method obterNomeItemPorTipo
+	  * @method CanvasCadastrarCtrl::obterNomeItemPorTipo
 	  */
 	$scope.obterNomeItemPorTipo = function() {
 		return canvasService.obterNomeItemPorTipo( $scope.tipo );
@@ -40,7 +40,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'CanvasCadastrarCtrl', [ '$scope'
 
 	/**
 	 * Valida os parâmetros de entrada de uma requisição de cadastro de um novo item.
-	 * @method validarParametros
+	 * @method CanvasCadastrarCtrl::validarParametros
 	 */
 	$scope.validarParametros = function() {
 		var tipos = [ 'pc', 'ac', 'rc', 'pv', 'rcl', 'ca', 'sc', 'ec', 'fr' ];

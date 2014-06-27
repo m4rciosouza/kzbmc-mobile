@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'CanvasVisualizarCtrl', [ '$scope
 	  
 	/**
 	 * Carrega um projeto canvas para visualização do canvas.
-	 * @method carregarProjeto
+	 * @method CanvasVisualizarCtrl::carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
 		$scope.index = parseInt( $routeParams.index, 10 );

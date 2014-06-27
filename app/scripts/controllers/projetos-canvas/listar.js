@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasListarCtrl', [ '$s
 	  
 	  	/**
 		 * Carrega uma lista de projetos canvas.
-		 * @method carregarProjetos
+		 * @method ProjetosCanvasListarCtrl::carregarProjetos
 		 */
 	    $scope.carregarProjetos = function() {
 	    	$scope.projetos = projetoCanvasService.obterProjetosJson();

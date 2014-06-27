@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasRemoverCtrl', [ '$s
 	  
 	/**
 	 * Carrega um projeto canvas para remoção.
-	 * @method carregarProjeto
+	 * @method ProjetosCanvasRemoverCtrl::carregarProjeto
 	 */
 	$scope.carregarProjeto = function() {
 		$scope.index = parseInt( $routeParams.index, 10 );
@@ -23,7 +23,7 @@ angular.module( 'kzbmcMobileApp' ).controller('ProjetosCanvasRemoverCtrl', [ '$s
       
     /**
 	 * Remove um projeto canvas.
-	 * @method remover
+	 * @method ProjetosCanvasRemoverCtrl::remover
 	 * @param {object} canvas
 	 */
     $scope.remover = function() {

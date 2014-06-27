@@ -35,7 +35,7 @@ kzbmcMobileApp.config(function ($routeProvider) {
       })
       .when('/editar-remover-item-canvas/:projetoId/:tipo/:itemId', {
         templateUrl: 'views/canvas/editar-remover.html',
-        controller: 'ProjetosCanvasEditarRemoverCtrl'
+        controller: 'CanvasEditarRemoverCtrl'
       })
       .when('/ajuda', {
         templateUrl: 'views/ajuda/index.html'

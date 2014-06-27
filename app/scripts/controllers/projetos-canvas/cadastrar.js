@@ -14,7 +14,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasCadastrarCtrl', [ 
 
 	/**
 	 * Cadastra um novo projeto canvas.
-	 * @method cadastrar
+	 * @method ProjetosCanvasCadastrarCtrl::cadastrar
 	 * @param {object} canvas
 	 */
 	$scope.cadastrar = function( canvas ) {

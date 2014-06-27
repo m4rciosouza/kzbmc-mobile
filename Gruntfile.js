@@ -25,6 +25,16 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    // Define the jsdoc settings
+    jsdoc : {
+      dist : {
+        src: ['<%= yeoman.app %>/scripts/**/*.js', 'test/spec/**/*.js'], 
+        options: {
+          destination: 'doc'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -393,7 +403,8 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'jsdoc'
   ]);
 
   grunt.registerTask('default', [
