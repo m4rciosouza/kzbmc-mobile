@@ -6,7 +6,6 @@ before_install:
   - gem install compass --version "=0.12.2"
 node_js:
   - '0.10'
-  - '0.8'
 before_script:
   - 'npm install -g bower grunt-cli karma'
   - 'bower install'
