@@ -1,9 +1,10 @@
 language: node_js
+before_install:
+  - gem install sass --version "=3.2.12"
+  - gem install compass --version "=0.12.2"
 node_js:
   - '0.10'
   - '0.8'
 before_script:
-  - 'gem install sass --version "=3.2.12"'
-  - 'gem install compass --version "=0.12.2"'
-  - 'npm install -g bower grunt-cli'
+  - 'npm install -g bower grunt-cli karma'
   - 'bower install'
