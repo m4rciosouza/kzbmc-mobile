@@ -67,6 +67,10 @@ kzbmcMobileApp.config(function ($routeProvider) {
       .when('/ajuda/fluxo-receita', {
         templateUrl: 'views/ajuda/fluxo-receita.html'
       })
+      .when('/enviar-por-email', {
+        templateUrl: 'views/enviar-por-email.html',
+        controller: 'EnviarPorEmailCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

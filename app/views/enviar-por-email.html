@@ -1,0 +1,74 @@
+<div class="page-header kz_center">
+	<h1>Enviar Canvas por email</h1>
+	<p>Preencha o campo email e clique no bot&atilde;o ao lado do modelo canvas para envi&aacute;-lo para o email indicado.</p>
+</div>
+
+<div class="kz_content">
+	<div class="row">
+		<form role="form" name="form" novalidate>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" class="form-control" id="email" name="email" 
+					placeholder="Digite o seu email..." ng-model="email"
+					ng-model="item.titulo" maxlength="50" required />
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-primary" ng-click="gravarEmail()" ng-disabled="form.$invalid">
+	      				Gravar
+	      		</button>
+	      		<hr />
+	     	</div>
+		</form>
+	</div>
+
+	<div class="row" ng-show="exibirMsgOk">
+		<p class="alert-success kz_msg_padding">
+			Email enviado com sucesso!
+		</p>
+	</div>
+
+	<div class="row" ng-show="exibirMsgErro">
+		<p class="alert-danger kz_msg_padding">
+			Erro enviando email. Verifique a conex&atilde;o com a Internet e tente novamente.
+		</p>
+	</div>
+
+	<div class="row" ng-show="processando">
+		<img ng-src="images/ajax-loader.gif" alt="Enviando email" title="Enviando email" />
+		Aguarde o envio do email...
+	</div>
+
+	<div class="row">
+		<div class="table-responsive" ng-show="projetos.length>0">
+	  		<table class="table table-striped table-hover">
+	    		<thead>
+	    			<tr>
+	    				<th>Canvas de Modelo de Negócios</th>
+	    			</tr>
+	    		</thead>
+	    		<tbody>
+	    			<tr ng-repeat="projeto in projetos">
+	    				<td class="kz_mouse_cursor">
+			              	<button type="button" class="btn btn-primary" ng-click="enviarEmail($index)" ng-disabled="btnDesabilitado">
+				      			&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;
+				      		</button>
+	    					<a ng-href="#/canvas/{{$index}}">
+	    						{{projeto.nome}}<br />
+	    						<small><em>{{projeto.descricao}}</em></small>
+	    					</a>
+	    				</td>
+	    			</tr>
+	    		</tbody>
+	  		</table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 kz_center">
+			<br />
+			<a ng-href="#/" class="btn btn-default">
+        		<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+        	</a>
+        </div>
+    </div>
+</div>
