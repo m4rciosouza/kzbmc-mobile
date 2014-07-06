@@ -6,10 +6,10 @@
  */
 'use strict';
 
-angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasCadastrarCtrl', [ '$scope', '$location', 'projetoCanvasService', 
-		function( $scope, $location, projetoCanvasService ) {
+angular.module( 'kzbmcMobileApp' ).controller( 'ProjetosCanvasCadastrarCtrl', [ '$scope', '$location', 'projetoCanvasService', '$rootScope', 
+		function( $scope, $location, projetoCanvasService, $rootScope ) {
 	  
-	$scope.liteVersion = false;
+	$scope.liteVersion = $rootScope.liteVersion;
 	$scope.qtdProjetos = projetoCanvasService.obterProjetos().length;
 
 	/**

@@ -1,4 +1,4 @@
-kzbmc-mobile
+kzbmc-mobile [![Build Status](https://travis-ci.org/m4rciosouza/kzbmc-mobile.svg?branch=master)](https://travis-ci.org/m4rciosouza/kzbmc-mobile)
 =============================
 
 This is a HTML5 application that enables you to create and manage Business Model Canvas.

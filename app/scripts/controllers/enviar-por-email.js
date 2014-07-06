@@ -6,12 +6,9 @@
  */
 'use strict';
 
-angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope', '$http', 'localStorageService', 'projetoCanvasService', 
-	function( $scope, $http, localStorageService, projetoCanvasService ) {
+angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope', '$http', 'localStorageService', 'projetoCanvasService', '$rootScope', 
+	function( $scope, $http, localStorageService, projetoCanvasService, $rootScope ) {
 	  
-	$scope.email = localStorageService.get( 'email' ) || '';
-	$scope.projetos = projetoCanvasService.obterProjetosJson();
-
 	/**
 	 * Modifica o estado dos controles de mensagens e botões da tela.
 	 * @method EnviarPorEmailCtrl::reser
@@ -31,6 +28,14 @@ angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope',
 	 */
 	$scope.gravarEmail = function() {
 		localStorageService.add( 'email', $scope.email );
+	};
+
+	/**
+	 * Retorna o email que será utilizado para o envio de um modelo canvas.
+	 * @method EnviarPorEmailCtrl::carregarEmail
+	 */
+	$scope.carregarEmail = function() {
+		return localStorageService.get( 'email' ) || '';
 	};
 
 	/**
@@ -59,5 +64,9 @@ angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope',
 		}
 	}; 
 
+	$scope.liteVersion = $rootScope.liteVersion;
 	$scope.reset( false, false );
+
+	$scope.email = $scope.carregarEmail();
+	$scope.projetos = projetoCanvasService.obterProjetosJson();
 }]);

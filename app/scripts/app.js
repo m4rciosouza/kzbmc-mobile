@@ -7,7 +7,11 @@ var kzbmcMobileApp = angular.module('kzbmcMobileApp', [
       'ui.sortable'
     ]);
 
-kzbmcMobileApp.config(function ($routeProvider) {
+kzbmcMobileApp.run( function( $rootScope ) {
+    $rootScope.liteVersion = false;
+});
+
+kzbmcMobileApp.config( function( $routeProvider ) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/projetos-canvas/listar.html',
