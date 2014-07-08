@@ -4,12 +4,9 @@ angular.module( 'LocalStorageModule' ).value( 'prefix', 'kzbmc' );
 var kzbmcMobileApp = angular.module('kzbmcMobileApp', [
       'ngRoute',
       'LocalStorageModule',
-      'ui.sortable'
+      'ui.sortable',
+      'pascalprecht.translate'
     ]);
-
-kzbmcMobileApp.run( function( $rootScope ) {
-    $rootScope.liteVersion = false;
-});
 
 kzbmcMobileApp.config( function( $routeProvider ) {
     $routeProvider
@@ -79,3 +76,24 @@ kzbmcMobileApp.config( function( $routeProvider ) {
         redirectTo: '/'
       });
   });
+
+kzbmcMobileApp.config( function( $translateProvider ) {
+  $translateProvider.translations( 'pt', {
+    CANVAS_MODELO_NEGOCIOS : 'Canvas de Modelo de Neg\u00f3cios',
+    CRIAR_NOVO_CANVAS : 'Criar Novo Canvas'
+  })
+  .translations( 'en', {
+    CANVAS_MODELO_NEGOCIOS : 'Business Model Canvas',
+    CRIAR_NOVO_CANVAS : 'Create New Canvas'
+  })
+  .translations( 'es', {
+    CANVAS_MODELO_NEGOCIOS : 'Modelo de Negocio Canvas',
+    CRIAR_NOVO_CANVAS : 'Crear Nuevo Canvas'
+  });
+  $translateProvider.preferredLanguage( 'pt' );
+});
+
+kzbmcMobileApp.run( function( $rootScope, localStorageService, $translate ) {
+  $rootScope.liteVersion = false;
+  $translate.use( localStorageService.get( 'lingua' ) || 'pt' );
+});

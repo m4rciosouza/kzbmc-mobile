@@ -48,6 +48,19 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 
+  <!-- Language selection -->
+  <div class="container kz_right" ng-controller="I18nCtrl">
+    <a ng-href="" ng-click="selecionarLingua('pt')" class="kz_mouse_cursor">
+      <img ng-src="images/flag_brasil.png" alt="Português" width="36" />
+    </a>
+    <a ng-href="" ng-click="selecionarLingua('es')" class="kz_mouse_cursor">
+      <img ng-src="images/flag_spain.png" alt="Espanhol" width="36" />
+    </a>
+    <a ng-href="" ng-click="selecionarLingua('en')" class="kz_mouse_cursor">
+      <img ng-src="images/flag_united_kingdom.png" alt="Inglês" width="36" />
+    </a>
+  </div>
+
   <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>  
     
@@ -132,6 +145,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-local-storage/angular-local-storage.js"></script>
     <script src="bower_components/angular-ui-sortable/src/sortable.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -144,6 +158,7 @@
     <script src="scripts/controllers/canvas/cadastrar.js"></script>
     <script src="scripts/controllers/canvas/editar-remover.js"></script>
     <script src="scripts/controllers/enviar-por-email.js"></script>
+    <script src="scripts/controllers/i18n.js"></script>
     <script src="scripts/services/projeto-canvas.js"></script>
     <script src="scripts/services/canvas.js"></script>
     <!-- endbuild -->

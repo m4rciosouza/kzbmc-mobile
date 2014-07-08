@@ -11,7 +11,7 @@ angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope',
 	  
 	/**
 	 * Modifica o estado dos controles de mensagens e botões da tela.
-	 * @method EnviarPorEmailCtrl::reser
+	 * @method EnviarPorEmailCtrl::reset
 	 * @param {boolean} sucesso flag de indicando se a msg de sucesso deve ser exibida
 	 * @param {boolean} erro flag de indicando se a msg de erro deve ser exibida
 	 */
