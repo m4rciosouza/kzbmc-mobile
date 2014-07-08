@@ -16,6 +16,7 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-local-storage/angular-local-storage.js',
       'app/bower_components/angular-ui-sortable/src/sortable.js',
+      'app/bower_components/angular-translate/angular-translate.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
