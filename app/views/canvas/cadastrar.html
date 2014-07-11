@@ -1,22 +1,22 @@
 <div class="page-header kz_center">
 	<h1>{{projeto.nome}}</h1>
-	<h2>Adicionar em : {{obterNomeItemPorTipo()}}</h2>
+	<h2>{{ 'ADICIONAR_EM' | translate }} : {{obterNomeItemPorTipo()}}</h2>
 
 	<form role="form" name="form" novalidate>
 		<div class="form-group">
-			<label for="titulo">Título</label>
+			<label for="titulo">{{ 'TITULO' | translate }}</label>
 			<input type="text" class="form-control" id="titulo" name="titulo" 
-				placeholder="Digite um t&iacute;tulo para o item..."
+				placeholder="{{ 'DIGITE_TITULO_ITEM' | translate }}"
 				ng-model="item.titulo" maxlength="50" required />
 		</div>
 		<div class="form-group">
-			<label for="descricao">Descrição</label>
+			<label for="descricao">{{ 'DESCRICAO' | translate }}</label>
 			<textarea class="form-control" id="descricao" name="descricao"
-				placeholder="Digite uma descri&ccedil;&atilde;o para o item..." 
+				placeholder="{{ 'DIGITE_DESCRICAO_ITEM' | translate }}" 
 				rows="4" ng-model="item.descricao" required></textarea>
 		</div>
 		<div class="form-group">
-			<strong>Cor</strong>
+			<strong>{{ 'COR' | translate }}</strong>
 			<br />
 			<label class="radio-inline">
 				<input type="radio" name="cor" id="corWarning" value="warning" ng-model="item.cor" required />
@@ -38,10 +38,10 @@
 		<div class="form-group">
 			<br />
 			<button type="button" class="btn btn-primary" ng-click="cadastrar(item)" ng-disabled="form.$invalid">
-      				Adicionar
+      				{{ 'ADICIONAR' | translate }}
       		</button>
      		<a ng-href="#/canvas/{{projetoId}}" class="btn btn-default">
-    			<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+    			<span class="glyphicon glyphicon-chevron-left"></span> {{ 'VOLTAR' | translate }}
     		</a>
      	</div>
 	</form>

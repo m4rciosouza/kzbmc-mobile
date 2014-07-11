@@ -1,19 +1,19 @@
 <div class="page-header kz_center">
-  	<h1>Criar Novo Canvas</h1>
+  	<h1>{{ 'CRIAR_NOVO_CANVAS' | translate }}</h1>
 </div>
 <div class="kz_content">
   <div class="row" ng-show="liteVersion && qtdProjetos > 0">
     <div class="col-xs-12 kz_center">
-      <h3>Vers&atilde;o lite limitada a um projeto. Para criar projetos ilimitados atualize para a vers&atilde;o Enterprise.</h3>
+      <h3>{{ 'VERSAO_LITE_LIMITADA' | translate }}</h3>
       <br />
       <a ng-href="https://play.google.com/store/apps/details?id=com.kazale.kzbmcee" target="_blank" class="btn btn-primary">
-        Atualizar vers&atilde;o
+        {{ 'ATUALIZAR_VERSAO' | translate }}
       </a>
     </div>
     <div class="col-xs-12 kz_center">
       <br />
       <a ng-href="#/" class="btn btn-default">
-        <span class="glyphicon glyphicon-chevron-left"></span> Voltar
+        <span class="glyphicon glyphicon-chevron-left"></span> {{ 'VOLTAR' | translate }}
       </a>
     </div>
   </div>
@@ -22,24 +22,24 @@
 		<div class="col-xs-12 kz_center">
       		<form role="form" name="form" novalidate>
         		<div class="form-group">
-    				<label for="nome" class="control-label">Nome do Projeto</label>
+    				<label for="nome" class="control-label">{{ 'NOME_DO_PROJETO' | translate }}</label>
     				<input type="text" class="form-control" id="nome" name="nome" 
     					maxlength="50" ng-model="canvas.nome" 
-    					placeholder="Digite o nome do projeto..." required />
+    					placeholder="{{ 'DIGITE_NOME_PROJETO' | translate }}" required />
   				</div>
   				<div class="form-group">
-    				<label for="descricao" class="control-label">Breve Descrição</label>
+    				<label for="descricao" class="control-label">{{ 'BREVE_DESCRICAO' | translate }}</label>
     				<input type="text" class="form-control" id="descricao" name="descricao" 
     					maxlength="50" ng-model="canvas.descricao" 
-    					placeholder="Digite uma breve descrição do projeto..." required />
+    					placeholder="{{ 'DIGITE_BREVE_DESCRICAO_PROJETO' | translate }}" required />
   				</div>
   				<div class="form-group">
   					<button type="button" class="btn btn-primary" data-dismiss="modal" 
       					ng-click="cadastrar(canvas)" ng-disabled="form.$invalid">
-      					Criar
+      					{{ 'CRIAR' | translate }}
       			</button>
   					<a ng-href="#/" class="btn btn-default">
-              <span class="glyphicon glyphicon-chevron-left"></span> Voltar
+              <span class="glyphicon glyphicon-chevron-left"></span> {{ 'VOLTAR' | translate }}
             </a>
   				</div>
         	</form>

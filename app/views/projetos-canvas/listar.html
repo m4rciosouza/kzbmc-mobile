@@ -12,22 +12,22 @@
   		<table class="table table-striped table-hover">
     		<thead>
     			<tr>
-    				<th>Meus Canvas de Modelo de Neg&oacute;cios</th>
+    				<th>{{ 'MEUS_CANVAS' | translate }}</th>
     			</tr>
     		</thead>
     		<tbody>
     			<tr ng-repeat="projeto in projetos">
     				<td class="kz_mouse_cursor">
               <a ng-href="#/editar-canvas/{{$index}}" class="btn btn-primary"
-                alt="Editar Canvas" title="Editar Canvas">
+                alt="{{ 'EDITAR_CANVAS' | translate }}" title="{{ 'EDITAR_CANVAS' | translate }}">
                 &nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;
               </a>
               <a ng-href="#/remover-canvas/{{$index}}" class="btn btn-primary"
-                alt="Remover Canvas" title="Remover Canvas">
+                alt="{{ 'REMOVER_CANVAS' | translate }}" title="{{ 'REMOVER_CANVAS' | translate }}">
                 &nbsp;&nbsp;<span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;
               </a>
               <a ng-href="#/canvas/{{$index}}" class="btn btn-primary"
-                alt="Visualizar Canvas" title="Visualizar Canvas">
+                alt="{{ 'VISUALIZAR_CANVAS' | translate }}" title="{{ 'VISUALIZAR_CANVAS' | translate }}">
                 &nbsp;&nbsp;<span class="glyphicon glyphicon-picture"></span>&nbsp;&nbsp;
               </a>
     					<a ng-href="#/canvas/{{$index}}">
@@ -43,7 +43,7 @@
 	<br />
   	<div class="row" ng-show="projetos.length<1">
 		<div class="col-xs-12 kz_center">
-			<p>Nenhum Canvas criado, clique no botão acima para criar um agora mesmo.</p>
+			<p>{{ 'NENHUM_CANVAS' | translate }}</p>
 		</div>
 	</div>
 </div>

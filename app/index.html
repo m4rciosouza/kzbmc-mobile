@@ -33,14 +33,17 @@
       			<span class="icon-bar"></span>
       			<span class="icon-bar"></span>
     		</button>
-    		<a class="navbar-brand" ng-href="#/">KZ-Canvas</a>
+    		<a class="navbar-brand" ng-href="#/">{{ 'KZ_CANVAS' | translate }}</a>
   		</div>
   		<div class="collapse navbar-collapse" id="kz-navbar-collapse">
     		<ul class="nav navbar-nav">
-    			<li><a ng-href="#/">Inicial</a></li>
-     			<!-- <li><a href="" data-toggle="modal" data-target="#sincronizarDados">Sincronizar Dados</a></li> -->
-          <li><a ng-href="#/enviar-por-email" title="Enviar Por Email">Enviar Por Email</a></li>
-          <li><a ng-href="#/ajuda" title="Ajuda">Ajuda</a></li>
+    			<li><a ng-href="#/">{{ 'INICIAL' | translate }}</a></li>
+          <li>
+            <a ng-href="#/enviar-por-email" title="{{ 'ENVIAR_POR_EMAIL' | translate }}">
+              {{ 'ENVIAR_POR_EMAIL' | translate }}
+            </a>
+          </li>
+          <li><a ng-href="#/ajuda" title="{{ 'AJUDA' | translate }}">{{ 'AJUDA' | translate }}</a></li>
       		</ul>
       	</div><!-- /.navbar-collapse -->
   	</nav>
@@ -48,13 +51,13 @@
   <!-- Language selection -->
   <div class="container kz_right" ng-controller="I18nCtrl">
     <a ng-href="" ng-click="selecionarLingua('pt')" class="kz_mouse_cursor">
-      <img ng-src="images/flag_brasil.png" alt="Português" width="36" />
+      <img ng-src="images/flag_brasil.png" alt="{{ 'PORTUGUES' | translate }}" width="36" />
     </a>
     <a ng-href="" ng-click="selecionarLingua('es')" class="kz_mouse_cursor">
-      <img ng-src="images/flag_spain.png" alt="Espanhol" width="36" />
+      <img ng-src="images/flag_spain.png" alt="{{ 'ESPANHOL' | translate }}" width="36" />
     </a>
     <a ng-href="" ng-click="selecionarLingua('en')" class="kz_mouse_cursor">
-      <img ng-src="images/flag_united_kingdom.png" alt="Inglês" width="36" />
+      <img ng-src="images/flag_united_kingdom.png" alt="{{ 'INGLES' | translate }}" width="36" />
     </a>
   </div>
 
@@ -63,41 +66,8 @@
 		
 	<!-- Page Footer -->
 	<div class="kz_page_footer kz_center">
-		<p>&copy; <a href="http://kazale.com" title="Kazale" alt="Kazale" target="_blank">Kazale.com</a> 2014. Todos os direitos reservados</p>
-	</div>
-	
-	<!-- Sincronizar dados -->
-	<div class="modal fade" id="sincronizarDados" tabindex="-1" role="dialog" aria-labelledby="sincronizarDadosLabel" aria-hidden="true">
-		<div class="modal-dialog">
-    		<div class="modal-content">
-    			<div class="modal-header">
-      				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        			<h4 class="modal-title" id="sincronizarDadosLabel">
-        				Sincronizar Dados
-        			</h4>
-      			</div>
-      			<div class="modal-body">
-      				<p>Sincronizando o seu Canvas de Modelo de Negócios em nosso sistema online você será capaz de
-      				editar os seus modelos canvas online e que qualquer lugar ou dispositivo, compartilhar com seus amigos, 
-      				imprimi-lo, além de manter uma cópia de segurança de seu Canvas.</p>
-      				<p>Para sincronizar os dados cadastre-se gratuitamente <a href="" target="_blank">aqui</a> 
-      				para obter sua API Key, um código necessário para identificar e sincronizar seus modelos canvas em sua 
-      				conta online.</p>
-      				<form role="form">
-        				<div class="form-group">
-    						<label for="nome">API Key</label>
-    						<input type="text" placeholder="Entre com sua API Key..." class="form-control" id="nome" name="nome" maxlength="32" />
-  						</div>
-        			</form>
-        			<p><small><em>* Cadastre-se gratuitamente <a href="" target="_blank">aqui</a>, digite sua API Key acima e 
-        			clique em "Sincronizar Dados" para expandir as possibilidades de seu modelo canvas.</em></small></p>
-      			</div>
-      			<div class="modal-footer">
-      				<button type="button" class="btn btn-primary">Sincronizar Dados</button>
-        			<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      			</div>
-    		</div>
-  		</div>
+		<p>&copy; <a href="http://kazale.com" title="{{ 'KAZALE' | translate }}" alt="{{ 'KAZALE' | translate }}" target="_blank">
+    {{ 'KAZALE_COM' | translate }}</a> {{ 'COPYRIGHT' | translate }}</p>
 	</div>
 	
     <script src="bower_components/jquery/jquery.js"></script>

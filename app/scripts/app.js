@@ -79,8 +79,51 @@ kzbmcMobileApp.config( function( $routeProvider ) {
 
 kzbmcMobileApp.config( function( $translateProvider ) {
   $translateProvider.translations( 'pt', {
+    // index.html
+    KZ_CANVAS : 'KZ-Canvas',
+    INICIAL : 'Inicial',
+    ENVIAR_POR_EMAIL : 'Enviar Por Email',
+    AJUDA : 'Ajuda',
+    PORTUGUES : 'Português',
+    ESPANHOL : 'Espanhol',
+    INGLES : 'Inglês',
+    KAZALE : 'Kazale',
+    KAZALE_COM : 'Kazale.com',
+    COPYRIGHT : '2014. Todos os direitos reservados',
+    // projeto-canvas/listar.html
     CANVAS_MODELO_NEGOCIOS : 'Canvas de Modelo de Neg\u00f3cios',
-    CRIAR_NOVO_CANVAS : 'Criar Novo Canvas'
+    CRIAR_NOVO_CANVAS : 'Criar Novo Canvas',
+    MEUS_CANVAS : 'Meus Canvas de Modelo de Neg&oacute;cios',
+    EDITAR_CANVAS : 'Editar Canvas',
+    REMOVER_CANVAS : 'Remover Canvas',
+    VISUALIZAR_CANVAS : 'Visualizar Canvas',
+    NENHUM_CANVAS : 'Nenhum Canvas criado, clique no botão acima para criar um agora mesmo.',
+    // projeto-canvas/cadastrar.html
+    VERSAO_LITE_LIMITADA : 'Vers&atilde;o lite limitada a um projeto. Para criar projetos ilimitados atualize para a vers&atilde;o Enterprise.',
+    ATUALIZAR_VERSAO : 'Atualizar vers&atilde;o',
+    VOLTAR : 'Voltar',
+    NOME_DO_PROJETO : 'Nome do Projeto',
+    DIGITE_NOME_PROJETO : 'Digite o nome do projeto...',
+    BREVE_DESCRICAO : 'Breve Descrição',
+    DIGITE_BREVE_DESCRICAO_PROJETO : 'Digite uma breve descrição do projeto...',
+    CRIAR : 'Criar',
+    // projeto-canvas/editar.html
+    ATUALIZAR : 'Atualizar',
+    // projeto-canvas/remover.html
+    REMOVER : 'Remover',
+    // canvas/cadastrar.html
+    ADICIONAR_EM : 'Adicionar em',
+    TITULO : 'T&iacute;tulo',
+    DIGITE_TITULO_ITEM : 'Digite um t&iacute;tulo para o item...',
+    DESCRICAO : 'Descri&ccedil;&atilde;o',
+    DIGITE_DESCRICAO_ITEM : 'Digite uma descri&ccedil;&atilde;o para o item...',
+    COR : 'Cor',
+    ADICIONAR : 'Adicionar',
+    // canvas/editar-remover.html
+    EDITAR_REMOVER_EM : 'Editar / Remover em',
+    
+    // {{ '' | translate }}
+    // A : '',
   })
   .translations( 'en', {
     CANVAS_MODELO_NEGOCIOS : 'Business Model Canvas',
