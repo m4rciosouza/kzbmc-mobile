@@ -1,23 +1,23 @@
 <div class="page-header kz_center">
-	<h1>Enviar Canvas por email</h1>
+	<h1>{{ 'ENVIAR_EMAIL_1' | translate }}</h1>
 	<p ng-show="!liteVersion">
-		Preencha o campo email e clique no bot&atilde;o ao lado do modelo canvas para envi&aacute;-lo para o email indicado.
+		{{ 'ENVIAR_EMAIL_2' | translate }}
 	</p>
 </div>
 
 <div class="kz_content" ng-show="liteVersion">
   <div class="row">
     <div class="col-xs-12 kz_center">
-      <h3>Vers&atilde;o lite n&atilde;o permite o envio de emails. Para enviar os projetos por email atualize para a vers&atilde;o Enterprise.</h3>
+      <h3>{{ 'ENVIAR_EMAIL_3' | translate }}</h3>
       <br />
       <a ng-href="https://play.google.com/store/apps/details?id=com.kazale.kzbmcee" target="_blank" class="btn btn-primary">
-        Atualizar vers&atilde;o
+        {{ 'ENVIAR_EMAIL_4' | translate }}
       </a>
     </div>
     <div class="col-xs-12 kz_center">
       <br />
       <a ng-href="#/" class="btn btn-default">
-        <span class="glyphicon glyphicon-chevron-left"></span> Voltar
+        <span class="glyphicon glyphicon-chevron-left"></span> {{ 'VOLTAR' | translate }}
       </a>
     </div>
   </div>
@@ -27,14 +27,14 @@
 	<div class="row">
 		<form role="form" name="form" novalidate>
 			<div class="form-group">
-				<label for="email">Email (separe por vírgula para mais de um remetente)</label>
+				<label for="email">{{ 'ENVIAR_EMAIL_5' | translate }}</label>
 				<input type="text" class="form-control" id="email" name="email" 
-					placeholder="Digite o seu email..." ng-model="email"
+					placeholder="{{ 'ENVIAR_EMAIL_6' | translate }}" ng-model="email"
 					ng-model="item.titulo" maxlength="200" required />
 			</div>
 			<div class="form-group">
 				<button type="button" class="btn btn-primary" ng-click="gravarEmail()" ng-disabled="form.$invalid">
-	      				Gravar
+	      				{{ 'ENVIAR_EMAIL_7' | translate }}
 	      		</button>
 	      		<hr />
 	     	</div>
@@ -43,19 +43,20 @@
 
 	<div class="row" ng-show="exibirMsgOk">
 		<p class="alert-success kz_msg_padding">
-			Email enviado com sucesso!
+			{{ 'ENVIAR_EMAIL_8' | translate }}
 		</p>
 	</div>
 
 	<div class="row" ng-show="exibirMsgErro">
 		<p class="alert-danger kz_msg_padding">
-			Erro enviando email. Verifique a conex&atilde;o com a Internet e tente novamente.
+			{{ 'ENVIAR_EMAIL_9' | translate }}
 		</p>
 	</div>
 
 	<div class="row" ng-show="processando">
-		<img ng-src="images/ajax-loader.gif" alt="Enviando email" title="Enviando email" />
-		Aguarde o envio do email...
+		<img ng-src="images/ajax-loader.gif" alt="{{ 'ENVIAR_EMAIL_10' | translate }}" 
+			title="{{ 'ENVIAR_EMAIL_10' | translate }}" />
+		{{ 'ENVIAR_EMAIL_11' | translate }}
 	</div>
 
 	<div class="row">
@@ -63,13 +64,15 @@
 	  		<table class="table table-striped table-hover">
 	    		<thead>
 	    			<tr>
-	    				<th>Canvas de Modelo de Negócios</th>
+	    				<th>{{ 'ENVIAR_EMAIL_12' | translate }}</th>
 	    			</tr>
 	    		</thead>
 	    		<tbody>
 	    			<tr ng-repeat="projeto in projetos">
 	    				<td class="kz_mouse_cursor">
-			              	<button type="button" class="btn btn-primary" ng-click="enviarEmail($index)" ng-disabled="btnDesabilitado">
+			              	<button type="button" class="btn btn-primary" ng-click="enviarEmail($index)" 
+			              		alt="{{ 'ENVIAR_EMAIL_1' | translate }}" title="{{ 'ENVIAR_EMAIL_1' | translate }}" 
+			              		ng-disabled="btnDesabilitado">
 				      			&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;
 				      		</button>
 	    					<a ng-href="#/canvas/{{$index}}">
@@ -87,7 +90,7 @@
 		<div class="col-xs-12 kz_center">
 			<br />
 			<a ng-href="#/" class="btn btn-default">
-        		<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+        		<span class="glyphicon glyphicon-chevron-left"></span> {{ 'VOLTAR' | translate }}
         	</a>
         </div>
     </div>
