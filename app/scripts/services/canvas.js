@@ -60,15 +60,15 @@ angular.module( 'kzbmcMobileApp' ).factory( 'canvasService', [ 'localStorageServ
    */
   canvas.obterNomeItemPorTipo = function( tipo ) {
     var tipos = { 
-      'pc' : 'Parceiros Chave', 
-      'ac' : 'Atividades Chave', 
-      'rc' : 'Recursos Chave', 
-      'pv' : 'Propostas de Valor', 
-      'rcl' : 'Relacionamento com os Clientes', 
-      'ca' : 'Canais', 
-      'sc' : 'Segmentos de Clientes', 
-      'ec' : 'Estrutura de Custo', 
-      'fr' : 'Fluxo de Receita' 
+      'pc' : 'PARCEIROS_CHAVE', 
+      'ac' : 'ATIVIDADES_CHAVE', 
+      'rc' : 'RECURSOS_CHAVE', 
+      'pv' : 'PROPOSTAS_VALOR', 
+      'rcl' : 'RELACIONAMENTO_CLIENTES', 
+      'ca' : 'CANAIS', 
+      'sc' : 'SEGMENTOS_CLIENTES', 
+      'ec' : 'ESTRUTURA_CUSTO', 
+      'fr' : 'FLUXO_RECEITA' 
     };
     return tipos[ tipo ];
   };

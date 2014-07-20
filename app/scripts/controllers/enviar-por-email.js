@@ -49,8 +49,9 @@ angular.module( 'kzbmcMobileApp' ).controller( 'EnviarPorEmailCtrl', [ '$scope',
 		if( projeto !== false && $scope.email !== '' ) {
 			$scope.btnHabilitado = false;
 			$scope.processando = true;
+			var lingua = localStorageService.get( 'lingua' ) || 'pt';
 			$http.post( 'http://kazale.com/kzbmcmail/email.php', 
-				{ 'projeto' : projeto, 'id' : $canvasId, 'lingua' : 'br', 'email' : $scope.email  } ).
+				{ 'projeto' : projeto, 'id' : $canvasId, 'lingua' : lingua, 'email' : $scope.email  } ).
 				success( function( data ) {
 			    	var sucesso = ( data === 'OK' );
 			    	$scope.reset( sucesso, ! sucesso );
